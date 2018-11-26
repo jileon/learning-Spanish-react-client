@@ -5,7 +5,7 @@ export default class Navigation extends React.Component{
   render(){
   return(
     <section className="navigation-bar">
- <h1>Learning Spanish</h1>
+ <h1><a href='#home'>Learning Spanish</a></h1>
   <nav className='navigation-bar-nav'>
   
   <ul className='navLinks'>

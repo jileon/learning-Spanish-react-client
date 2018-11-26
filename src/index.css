@@ -1,3 +1,5 @@
+html{scroll-behavior:smooth}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,21 +8,27 @@ body {
 
 .header-bar{
   background: aqua;
-  position: relative;
+  position: fixed;
+  border-bottom: 1px solid black;
+  height:80px;
+  width: 100vw;
+  top: 0px;
+
 }
 
 h1 {
   margin: 0;
+  margin-left: 20px;
 }
 
 .navigation-bar {
-  border-bottom: 1px solid black;
   padding: 10px;
+
 }
 
 .navigation-bar h1, .navigation-bar nav, .navigation-bar-nav li {
   display: inline-block;
-  line-height: 50px;
+  line-height: 70px;
   /* vertical-align: middle; */
 }
 
@@ -33,6 +41,34 @@ h1 {
   text-align: right;
   position: absolute;
   top:-10px;
-  right: 20px;
+  right: 25px;
+}
 
+#home h2{
+text-align: center;
+padding-top: 90px;
+}
+
+#home p{
+  text-align: justify;
+  padding: 80px;
+  }
+
+.page-container{
+  height: 90vh;
+  width:100vw;
+}
+
+.user-page{
+  display: flex;
+  justify-content: center;
+}
+
+.user-area{
+ width:50vw;
+  border: solid black 1px;
+}
+
+div{
+  height: 80px;
 }

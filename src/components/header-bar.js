@@ -21,7 +21,7 @@ export class HeaderBar extends React.Component {
         return (
           
             <section className="header-bar">
-              <Navigation/>
+            <Navigation/>
                 {logOutButton}
             </section>
         );
