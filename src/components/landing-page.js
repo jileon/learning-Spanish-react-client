@@ -5,7 +5,7 @@ import LoginForm from './login-form';
 import Intro from './intro';
 import RegisterPage from './register-landing-page';
 import LoginPage from './login-landing-page';
-
+import HeaderBar from './header-bar';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -14,14 +14,15 @@ export function LandingPage(props) {
     }
 
     return (
-        <div className="home">
-     
+        <React.Fragment>
+        <HeaderBar />
+        <div className="home">    
             <Intro/>
             <LoginPage/>
             <RegisterPage/>
 
-            {/* <Link to="/register">Register</Link> */}
         </div>
+        </React.Fragment>
     );
 }
 

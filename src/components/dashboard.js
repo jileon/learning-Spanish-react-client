@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
-
+import './css/dashboard.css';
+import HeaderBar from './header-bar';
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
@@ -10,15 +11,17 @@ export class Dashboard extends React.Component {
 
     render() {
         return (
+            <React.Fragment>
+            <HeaderBar/>
             <div className="dashboard">
                 <div className="dashboard-username">
                     Username: {this.props.username}
                 </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className="dashboard-protected-data">
                     Protected data: {this.props.protectedData}
                 </div>
             </div>
+            </React.Fragment>
         );
     }
 }

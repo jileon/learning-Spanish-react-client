@@ -40,6 +40,9 @@ const storeAuthInfo = (authToken, dispatch) => {
     dispatch(setAuthToken(authToken));
     dispatch(authSuccess(decodedToken.user));
     saveAuthToken(authToken);
+    //TODO: delete console logs
+    // console.log('storeAuthInfor', 43);
+    // console.log(decodedToken.user, 44);
 };
 
 export const login = (username, password) => dispatch => {
