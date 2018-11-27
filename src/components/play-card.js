@@ -10,13 +10,18 @@ export class PlayCard extends React.Component {
 
 	correct = () => {
 		this.props.dispatch(correctAnswer());
-		this.props.dispatch(updateStats(this.props.id, 1, 0 ));
+		this.props.dispatch(updateStats(this.props.id, 1, 0));
+	};
+
+	incorrect = () => {
+		this.props.dispatch(wrongAnswer());
+		this.props.dispatch(updateStats(this.props.id, 0, 1));
 	};
 
 	render() {
 		console.log(this.props.answer);
 		console.log(this.props.correct, 'correct');
-		console.log(this.props.correct+1, 'correct plus 1');
+		console.log(this.props.correct + 1, 'correct plus 1');
 		console.log(this.props.correct, 'incorrect');
 		let userAnswer;
 		return (
@@ -46,7 +51,7 @@ export class PlayCard extends React.Component {
 
 
 								userAnswer === this.props.answer ? this.correct() :
-								this.props.dispatch(wrongAnswer());
+								this.incorrect();
 							this.input.value = '';
 						}}
 					>

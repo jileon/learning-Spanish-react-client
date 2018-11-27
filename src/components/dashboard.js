@@ -13,8 +13,6 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-    console.log(this.props.protectedData[0].correct, 'protectedData Correct')
-    // console.log(this.props.protectedData[0].correct, 'protectedData')
 
         return (
             <React.Fragment>
