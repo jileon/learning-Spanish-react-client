@@ -43,6 +43,14 @@ h1 {
   right: 25px;
 }
 
+
+.navigation-bar h1 a{
+  color: rgb(95, 2, 124);
+}
+.navLinks a{
+  color:#58513F;
+}
+
 #home h2{
 text-align: center;
 padding-top: 90px;

@@ -4,18 +4,22 @@
   height:100vh;
   position: relative;
   width:100vw;
+  display: flex;
+  justify-content: center;
 }
 
 
 .houses img{
-  width:100%;
+  width:90%;
   position: absolute;
-  bottom:40px;
+  bottom:50px;
+  left: 5%;
 }
 
 
 
 @media only screen and (min-width: 850px) {
+  
 .houses img{
   width:90%;
   position: absolute;
@@ -26,10 +30,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  /* .play-page{
-    background:pink;
 
-  } */
   
   .houses img{
  
@@ -43,11 +44,6 @@
 
   @media only screen and (min-width: 1200px) {
 
-    /* .play-page{
-      background:yellow;
-  
-    } */
-    
     .houses img{
       height:50%;
     }
