@@ -1,9 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './css/playCard.css'
+import {fetchQuestions} from '../actions/questions-actions';
 
 export  class PlayCard extends React.Component{
+componentDidMount(){
+  this.props.dispatch(fetchQuestions());
+}
+
 	render(){
+    let userAnswer;
    return (
       <section className="card">
         <div className="current-word">
@@ -12,8 +18,6 @@ export  class PlayCard extends React.Component{
         <div className="feedback">
           <h3>Feedback</h3>
         </div>
-     
-     
         <form className="user-form">
           <label htmlFor="user-answer"></label>
           <input
@@ -23,12 +27,13 @@ export  class PlayCard extends React.Component{
             type="userAnswer"
             ref={(input) => (this.input = input)}
           />
-  
           <button
             type="submit"
             className="submitButton"
             onClick={(e) => {
               e.preventDefault();
+              console.log(this.input.value);
+              userAnswer=this.input.value;
               this.input.value = '';
             }}
           >
