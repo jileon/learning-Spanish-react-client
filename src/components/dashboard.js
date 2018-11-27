@@ -1,11 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+// import {fetchProtectedData} from '../actions/protected-data';
 import {Link} from 'react-router-dom';
 import './css/dashboard.css';
 import HeaderBar from './header-bar';
-import Navigation from '../components/nav';
 
 
 export class Dashboard extends React.Component {
@@ -41,6 +40,7 @@ const mapStateToProps = state => {
     const {currentUser} = state.auth;
     return {
         username: state.auth.currentUser.username,
+        id: state.auth.currentUser.id,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
         // protectedData: state.protectedData.data
     };

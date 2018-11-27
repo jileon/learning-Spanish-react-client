@@ -3,9 +3,11 @@ import {Field, reduxForm, focus} from 'redux-form';
 import {registerUser} from '../actions/users';
 import {login} from '../actions/auth';
 import Input from './input';
+import {fetchStats} from '../actions/protected-data';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 const passwordLength = length({min: 10, max: 72});
 const matchesPassword = matches('password');
+
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
@@ -13,7 +15,12 @@ export class RegistrationForm extends React.Component {
         const user = {username, password, firstName, lastName};
         return this.props
             .dispatch(registerUser(user))
-            .then(() => this.props.dispatch(login(username, password)));
+            .then((user) => this.props.dispatch(login(username, password)))
+            .then(()=>{
+                console.log('fetchStats', 20)
+                this.props.dispatch(fetchStats());
+            })
+            
     }
 
     render() {

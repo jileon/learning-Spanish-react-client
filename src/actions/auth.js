@@ -100,7 +100,7 @@ export const refreshAuthToken = () => (dispatch, getState) => {
             // are invalid or expired, or something else went wrong, so clear
             // them and sign us out
             dispatch(authError(err));
-            // dispatch(clearAuth());
-            // clearAuthToken(authToken);
+            dispatch(clearAuth());
+            clearAuthToken(authToken);
         });
 };
