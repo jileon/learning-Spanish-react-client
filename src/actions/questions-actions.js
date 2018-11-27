@@ -1,6 +1,6 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
-
+import axios from 'axios';
 
 export const FETCH_QUESTIONS_SUCCESS = 'FETCH_QUESTIONS_SUCCESS';
 export const fetchQuestionsSuccess = questions => ({
@@ -36,19 +36,19 @@ export const wrongAnswer= ()=>({
 type: WRONG_ANSWER,
 })
 
+
+
 export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
     console.log('update stats')
     const authToken = getState().auth.authToken;
     const body ={correct, incorrect};
-    return fetch(`${API_BASE_URL}/stats/${id}`, {
+    return axios(`${API_BASE_URL}/stats/${id}`, {
         method: 'PUT',
-        body: JSON.stringify(body),
+        data:body ,
         headers: {
             Authorization: `Bearer ${authToken}`,
-            'content-type': 'application/json'
+
         }
     })
-    .then(res => normalizeResponseErrors(res))
-    .then(res => res.json())
-    .then(res=>console.log(res));
+    .then(({data})=>console.log(data))
 }
