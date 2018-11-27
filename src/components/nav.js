@@ -34,7 +34,7 @@ export class Navigation extends React.Component {
 		return (
 			<section className="navigation-bar">
 				<h1>
-					<a href="#home">Learning Spanish</a>
+				<Link to="/dashboard">Learning Spanish</Link>
 				</h1>
 				<nav className="navigation-bar-nav">
 					<ul className="navLinks">
