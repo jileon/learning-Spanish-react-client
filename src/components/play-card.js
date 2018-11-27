@@ -9,6 +9,11 @@ export  class PlayCard extends React.Component{
         <div className="current-word">
           <h3>Word</h3>
         </div>
+        <div className="feedback">
+          <h3>Feedback</h3>
+        </div>
+     
+     
         <form className="user-form">
           <label htmlFor="user-answer"></label>
           <input
@@ -30,6 +35,7 @@ export  class PlayCard extends React.Component{
             Submit
           </button>
         </form>
+      
       </section>
     );
   }
