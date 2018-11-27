@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
 
@@ -39,10 +39,10 @@ export class Navigation extends React.Component {
 				<nav className="navigation-bar-nav">
 					<ul className="navLinks">
 						<li>
-							<a href="#Dashboard">Dashboard</a>
+							<Link to="/dashboard">Dashboard</Link>
 						</li>
 						<li>
-							<a href="#Play">Play</a>
+						<Link to="/play">Play</Link>
 						</li>
 						<li>
 						<a href='#home' onClick={() => this.logOut()}>Logout</a>
@@ -56,9 +56,7 @@ export class Navigation extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				{/* {this.props.loggedIn===null? this.displayLoggedOut(): } */}
-				{
-					this.props.loggedIn ? this.displayLoggedIn() :
+				{	this.props.loggedIn ? this.displayLoggedIn() :
 					this.displayLoggedOut()}
 			</React.Fragment>
 		);

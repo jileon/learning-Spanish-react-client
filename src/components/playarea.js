@@ -2,7 +2,7 @@ import React from 'react';
 import{connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import HeaderBar from './header-bar';
-
+import './css/playArea.css'
 
 export class PlayArea extends React.Component{
 
@@ -14,7 +14,9 @@ export class PlayArea extends React.Component{
   return(
     <React.Fragment>
        <HeaderBar />
+       <section className="play-page">
        <h1>helllooooo</h1>
+       </section>
     </React.Fragment>
   )
   }
