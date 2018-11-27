@@ -1,35 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {clearAuth} from '../actions/auth';
-import {clearAuthToken} from '../local-storage';
 import Navigation from '../components/nav';
 
-export class HeaderBar extends React.Component {
-    logOut() {
-        this.props.dispatch(clearAuth());
-        clearAuthToken();
-    }
-
-    render() {
-        // Only render the log out button if we are logged in
-        let logOutButton;
-        if (this.props.loggedIn) {
-            logOutButton = (
-                <button onClick={() => this.logOut()}>Log out</button>
-            );
-        }
-        return (
-          
-            <section className="header-bar">
-            <Navigation/>
-                {logOutButton}
-            </section>
-        );
-    }
+export default function HeaderBar(props) {
+	return (
+		<section className="header-bar">
+			<Navigation />
+		</section>
+	);
 }
-
-const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(HeaderBar);

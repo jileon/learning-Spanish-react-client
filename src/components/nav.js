@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
 
@@ -40,6 +40,9 @@ export class Navigation extends React.Component {
 					<ul className="navLinks">
 						<li>
 							<a href="#Dashboard">Dashboard</a>
+						</li>
+						<li>
+							<a href="#Play">Play</a>
 						</li>
 						<li>
 						<a href='#home' onClick={() => this.logOut()}>Logout</a>
