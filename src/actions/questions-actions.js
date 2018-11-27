@@ -22,7 +22,33 @@ export const correctAnswer= ()=>({
 type: CORRECT_ANSWER,
 })
 
+
+export const ADD_CORRECT = 'ADD_CORRECT';
+export const addCorrect = num=>({
+    type: ADD_CORRECT,
+    num
+});
+
+
+
 export const WRONG_ANSWER = 'WRONG_ANSWER';
 export const wrongAnswer= ()=>({
 type: WRONG_ANSWER,
 })
+
+export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
+    console.log('update stats')
+    const authToken = getState().auth.authToken;
+    const body ={correct, incorrect};
+    return fetch(`${API_BASE_URL}/stats/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(body),
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+            'content-type': 'application/json'
+        }
+    })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(res=>console.log(res));
+}

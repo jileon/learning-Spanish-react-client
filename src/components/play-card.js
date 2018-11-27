@@ -1,15 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './css/playCard.css';
-import { fetchQuestions, correctAnswer, wrongAnswer } from '../actions/questions-actions';
+import { fetchQuestions, correctAnswer, wrongAnswer, updateStats, addCorrect } from '../actions/questions-actions';
 
 export class PlayCard extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchQuestions());
 	}
 
+	correct = () => {
+		this.props.dispatch(correctAnswer());
+		this.props.dispatch(updateStats(this.props.id, 1, 0 ));
+	};
+
 	render() {
 		console.log(this.props.answer);
+		console.log(this.props.correct, 'correct');
+		console.log(this.props.correct+1, 'correct plus 1');
+		console.log(this.props.correct, 'incorrect');
 		let userAnswer;
 		return (
 			<section className="card">
@@ -36,14 +44,17 @@ export class PlayCard extends React.Component {
 							console.log(this.input.value);
 							userAnswer = this.input.value;
 
-								userAnswer === this.props.answer ? this.props.dispatch(correctAnswer()) :
+
+								userAnswer === this.props.answer ? this.correct() :
 								this.props.dispatch(wrongAnswer());
 							this.input.value = '';
 						}}
 					>
 						Submit
 					</button>
-					<button type="button" onClick={(e)=>console.log('next button works')}>Next</button>
+					<button type="button" onClick={(e) => console.log('next button works')}>
+						Next
+					</button>
 				</form>
 			</section>
 		);
@@ -52,9 +63,12 @@ export class PlayCard extends React.Component {
 
 const mapStateToProps = (state) => ({
 	loggedIn: state.auth.currentUser !== null,
+	id: state.auth.currentUser.id,
 	question: state.questions.questions[0].q1.q,
 	answer: state.questions.questions[0].q1.a,
-	feedback: state.questions.feedback
+	feedback: state.questions.feedback,
+	correct: state.protectedData.data[0].correct,
+	incorrect: state.protectedData.data[0].incorrect
 });
 
 export default connect(mapStateToProps)(PlayCard);

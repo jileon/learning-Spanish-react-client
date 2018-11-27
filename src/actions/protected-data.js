@@ -27,7 +27,7 @@ export const fetchStats= ()=>(dispatch, getState)=>{
         body: JSON.stringify(body),
         headers: {
             Authorization: `Bearer ${authToken}`,
-            "Content-Type": "application/json"
+            'content-type': 'application/json'
         }
     })
         .then(res => normalizeResponseErrors(res))
