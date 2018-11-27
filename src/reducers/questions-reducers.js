@@ -11,7 +11,7 @@ const initialState = {
   }],
   stats:[],
   feedback:"",
-  error: null
+  error: null,
 };
 
 export default function questionsReducer(state = initialState, action) {
@@ -23,7 +23,7 @@ export default function questionsReducer(state = initialState, action) {
   } else if (action.type===CORRECT_ANSWER){
     return Object.assign({}, state, {feedback:"Correct, good job!", error:null})
   }else if (action.type===WRONG_ANSWER){
-    return Object.assign({}, state, {feedback:"You Suck Try Again", error:null})
+    return Object.assign({}, state, {feedback:`The correct answer is ${state.questions[0].q1.a}`, error:null})
   }
   return state;
 }
