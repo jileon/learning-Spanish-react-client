@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from './login-form';
+import { required } from '../validators';
 
 
 export default function LoginPage(props){
@@ -8,7 +9,8 @@ export default function LoginPage(props){
       <div id='login'></div>
     <section  className='page-container user-page'>
     <section className='user-area'>
-        <h3>Placeholder</h3>
+        {/* <h3>Placeholder</h3> */}
+        <img className='login-img' src={require('./images/AdobeStock_175992359_Preview.png')}></img>
       </section>
      <section className='user-area'>
       <LoginForm/>

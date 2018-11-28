@@ -31,3 +31,9 @@ margin-top:3px
 margin-top: 20px;
 padding:50px;
 }
+
+.login-img{
+  width: 100%;
+  position: relative;
+  top: 20%;
+}
