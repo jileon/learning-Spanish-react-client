@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './css/playCard.css';
-import { fetchQuestions, correctAnswer, wrongAnswer, updateStats, addCorrect } from '../actions/questions-actions';
+import { fetchQuestions, correctAnswer, wrongAnswer} from '../actions/questions-actions';
+import {fetchProtectedData, updateStats} from '../actions/protected-data';
 
 export class PlayCard extends React.Component {
 	componentDidMount() {
@@ -57,7 +58,7 @@ export class PlayCard extends React.Component {
 					>
 						Submit
 					</button>
-					<button type="button" onClick={(e) => console.log('next button works')}>
+					<button type="button" onClick={(e) => this.props.dispatch(fetchProtectedData())}>
 						Next
 					</button>
 				</form>
@@ -69,11 +70,11 @@ export class PlayCard extends React.Component {
 const mapStateToProps = (state) => ({
 	loggedIn: state.auth.currentUser !== null,
 	id: state.auth.currentUser.id,
-	question: state.questions.questions[0].q1.q,
-	answer: state.questions.questions[0].q1.a,
-	feedback: state.questions.feedback,
-	correct: state.protectedData.data[0].correct,
-	incorrect: state.protectedData.data[0].incorrect
+	question: state.protectedData.data.question.question,
+	answer: state.protectedData.data.question.answer,
+	feedback: state.protectedData.feedback,
+	correct: state.protectedData.data.correct,
+	incorrect: state.protectedData.data.incorrect
 });
 
 export default connect(mapStateToProps)(PlayCard);

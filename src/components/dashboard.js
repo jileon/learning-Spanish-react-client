@@ -23,8 +23,8 @@ export class Dashboard extends React.Component {
                 </section>
                 <section className="dashboard-protected-data">
                    <p> Here are your stats:</p>
-                        <p> Correct: {this.props.protectedData[0].correct}</p>
-                        <p> Incorrect: {this.props.protectedData[0].incorrect}</p>
+                        <p> Correct: {this.props.protectedData.correct}</p>
+                        <p> Incorrect: {this.props.protectedData.incorrect}</p> 
                 </section>
 
                 <section>

@@ -3,9 +3,10 @@ import {normalizeResponseErrors} from './utils';
 import axios from 'axios';
 
 export const FETCH_QUESTIONS_SUCCESS = 'FETCH_QUESTIONS_SUCCESS';
-export const fetchQuestionsSuccess = questions => ({
+export const fetchQuestionsSuccess = (question,answer) => ({
     type: FETCH_QUESTIONS_SUCCESS,
-    data: questions
+    question,
+    answer
 });
 
 export const fetchQuestions = ()=>dispatch=>{
@@ -41,10 +42,13 @@ type: WRONG_ANSWER,
 export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
     console.log('update stats')
     const authToken = getState().auth.authToken;
-    const body ={correct, incorrect};
+    const data = getState().protectedData.data;
+    data.correct=correct;
+    data.incorrect=incorrect;
+    console.log(data);
     return axios(`${API_BASE_URL}/stats/${id}`, {
         method: 'PUT',
-        data:body ,
+        data:data ,
         headers: {
             Authorization: `Bearer ${authToken}`,
 

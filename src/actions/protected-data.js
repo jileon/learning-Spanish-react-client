@@ -1,5 +1,7 @@
 import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
+import axios from 'axios';
+
 
 export const FETCH_PROTECTED_DATA_SUCCESS = 'FETCH_PROTECTED_DATA_SUCCESS';
 export const fetchProtectedDataSuccess = data => ({
@@ -14,8 +16,22 @@ export const fetchProtectedDataError = error => ({
 });
 
 
+
+
+export const CORRECT_ANSWER = 'CORRECT_ANSWER';
+export const correctAnswer= ()=>({
+type: CORRECT_ANSWER,
+})
+
+
+export const WRONG_ANSWER = 'WRONG_ANSWER';
+export const wrongAnswer= ()=>({
+type: WRONG_ANSWER,
+})
+
+
+
 export const fetchStats= ()=>(dispatch, getState)=>{
-    console.log("AHhhHHHHHHHHHHHH")
     const authToken = getState().auth.authToken;
     console.log(authToken);
     const userId = getState().auth.currentUser.id;
@@ -59,3 +75,22 @@ export const fetchProtectedData =() => (dispatch, getState) => {
             dispatch(fetchProtectedDataError(err));
         });
 };
+
+
+export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
+    console.log('update stats')
+    const authToken = getState().auth.authToken;
+    const data = getState().protectedData.data;
+    data.correct=correct;
+    data.incorrect=incorrect;
+    console.log(data);
+    return axios(`${API_BASE_URL}/stats/${id}`, {
+        method: 'PUT',
+        data:data ,
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+
+        }
+    })
+    .then(({data})=>console.log(data))
+}
