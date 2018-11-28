@@ -14,7 +14,7 @@ export function LandingPage(props) {
 
     return (
         <React.Fragment>
-        <HeaderBar />
+        <HeaderBar className="header-bar" />
         <div className="home">    
             <Intro/>
             <LoginPage/>

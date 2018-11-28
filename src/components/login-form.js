@@ -2,7 +2,7 @@ import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 import {login} from '../actions/auth';
-import {required, nonEmpty} from '../validators';
+import {required, nonEmpty, unrequired,pwrequired} from '../validators';
 
 export class LoginForm extends React.Component {
     onSubmit(values) {
@@ -25,21 +25,25 @@ export class LoginForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 {error}
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username"></label>
+                
                 <Field
                     component={Input}
+                    placeholder="username"
                     type="text"
                     name="username"
                     id="username"
-                    validate={[required, nonEmpty]}
+                    validate={[unrequired, nonEmpty]}
                 />
-                <label htmlFor="password">Password</label>
+                   <div className='form-separator'></div>
+                <label htmlFor="password"></label>
                 <Field
+                    placeholder="password"
                     component={Input}
                     type="password"
                     name="password"
                     id="password"
-                    validate={[required, nonEmpty]}
+                    validate={[pwrequired, nonEmpty]}
                 />
                 <button disabled={this.props.pristine || this.props.submitting}>
                     Log in

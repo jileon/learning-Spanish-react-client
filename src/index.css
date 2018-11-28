@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ssa1qac.css");
+
 html{scroll-behavior:smooth}
 
 body {
@@ -7,17 +9,33 @@ body {
 }
 
 .header-bar{
-  background: #7FB5D2;
+  background: #FFB201;
   position: fixed;
   border-bottom: 1px solid black;
   height:80px;
   width: 100vw;
   top: 0px;
+  z-index: 3;
+}
+
+
+.header-bar-logged{
+  background: rgb(78, 135, 161);
+  position: fixed;
+  border-bottom: 1px solid black;
+  height:80px;
+  width: 100vw;
+  top: 0px;
+  z-index: 3;
 }
 
 h1 {
   margin: 0;
   margin-left: 20px;
+font-family: ff-prater-block-web, sans-serif;
+font-weight: 400;
+font-size: 30px;
+font-style: normal;
 }
 
 .navigation-bar {
@@ -45,7 +63,7 @@ h1 {
 
 
 .navigation-bar h1 a{
-  color: rgb(95, 2, 124);
+  color: rgb(21, 0, 27);
 }
 .navLinks a{
   color:#58513F;

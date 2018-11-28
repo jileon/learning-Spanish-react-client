@@ -16,7 +16,7 @@ export class Dashboard extends React.Component {
 
         return (
             <React.Fragment>
-            <HeaderBar/>
+            <HeaderBar className='header-bar-logged'/>
             <section className="dashboard">
                 <section className="dashboard-username">
                    <p> WELCOME {this.props.username.toUpperCase()}!</p>
