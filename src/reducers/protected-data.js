@@ -3,13 +3,14 @@ import { FETCH_PROTECTED_DATA_SUCCESS, FETCH_PROTECTED_DATA_ERROR,CORRECT_ANSWER
 
 
 const initialState = {
-	data: [
+	data: 
 		{
 			correct: 0,
 			incorrect: 0,
-			questions: 0
-		}
-	],
+			question:{},
+			head:0,
+		},
+	
 	feedback:"",
 	error: null
 };
@@ -27,7 +28,7 @@ export default function reducer(state = initialState, action) {
 	}else if (action.type===CORRECT_ANSWER){
     return Object.assign({}, state, {feedback:"Correct, good job!", error:null})
   }else if (action.type===WRONG_ANSWER){
-    return Object.assign({}, state, {feedback:`The correct answer is ${state.answer}`, error:null})
+    return Object.assign({}, state, {feedback:`The correct answer is ${state.data.question.answer}`, error:null})
   }
 	return state;
 }
