@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
+import {resetFeedback} from '../actions/protected-data';
 
 export class Navigation extends React.Component {
 	logOut() {
+		this.props.dispatch(resetFeedback());
 		this.props.dispatch(clearAuth());
 		clearAuthToken();
 	}

@@ -96,5 +96,5 @@ export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
 
         }
     })
-    .then(({data})=>console.log(data))
+    .catch(err=>console.log(err))
 }

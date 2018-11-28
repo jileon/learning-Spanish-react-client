@@ -39,7 +39,6 @@ export class PlayCard extends React.Component {
 				className="submitButton"
 				onClick={(e) => {
 					e.preventDefault();
-					console.log(this.input.value);
 					userAnswer = this.input.value;
 					userAnswer.toLowerCase() === this.props.answer.toLowerCase() ? this.correct() :
 					this.incorrect();
