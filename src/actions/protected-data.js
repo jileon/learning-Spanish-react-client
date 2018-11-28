@@ -29,6 +29,10 @@ export const wrongAnswer= ()=>({
 type: WRONG_ANSWER,
 })
 
+export const RESET_FEEDBACK = "RESET_FEEDBACK";
+export const resetFeedback = ()=>({
+    type:RESET_FEEDBACK
+})
 
 
 export const fetchStats= ()=>(dispatch, getState)=>{

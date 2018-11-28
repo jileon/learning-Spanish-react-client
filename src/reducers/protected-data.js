@@ -1,4 +1,5 @@
-import { FETCH_PROTECTED_DATA_SUCCESS, FETCH_PROTECTED_DATA_ERROR,CORRECT_ANSWER, WRONG_ANSWER} from '../actions/protected-data';
+import { FETCH_PROTECTED_DATA_SUCCESS, FETCH_PROTECTED_DATA_ERROR,
+	CORRECT_ANSWER, WRONG_ANSWER,RESET_FEEDBACK } from '../actions/protected-data';
 
 
 
@@ -11,7 +12,7 @@ const initialState = {
 			head:0,
 		},
 	
-	feedback:"",
+	feedback:null,
 	error: null
 };
 
@@ -29,6 +30,8 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {feedback:"Correct, good job!", error:null})
   }else if (action.type===WRONG_ANSWER){
     return Object.assign({}, state, {feedback:`The correct answer is ${state.data.question.answer}`, error:null})
-  }
+  }else if (action.type===RESET_FEEDBACK){
+		return Object.assign({}, state, {feedback:null})
+	}
 	return state;
 }
