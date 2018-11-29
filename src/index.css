@@ -95,7 +95,8 @@ h1 {
 }
 
 .user-area {
-  width: 50vw;
+  display: block;
+  width: 99vw;
   border: solid black 1px;
 }
 
@@ -105,8 +106,29 @@ div {
 
 
 @media only screen and (max-width: 575px) {
+
+  #login, #register {
+    all: unset;
+  }
+
+  .no-show h3 {
+    display: none;
+  }
+
   .navLinks li {
     font-size: 16px;
+  }
+
+  .user-page {
+    flex-direction: column;
+    margin-top: -25vh;
+  }
+
+  .user-area {
+    display: block;
+    width: 99vw;
+    border: solid black 1px;
+    
   }
 
   .navigation-bar h1 {
