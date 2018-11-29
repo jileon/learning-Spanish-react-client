@@ -1,10 +1,13 @@
 import React from 'react';
+import ReactModal from 'react-modal';
+import './css/dashboard.css';
 import { connect } from 'react-redux';
-import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 import { Link } from 'react-router-dom';
-import './css/dashboard.css';
+import { stats_modalOff, stats_modalOn } from '../actions/modal-actions';
+import requiresLogin from './requires-login';
 import HeaderBar from './header-bar';
+import Modal from './modal_content';
 
 export class Dashboard extends React.Component {
 	componentDidMount() {
@@ -17,22 +20,42 @@ export class Dashboard extends React.Component {
 				<HeaderBar className="header-bar-logged" />
 				<section className="dasboard-container">
 					<section className="dashboard">
-							<section className="user-stats-laptop">
-                            <div className='stats'>
-                            <div className='welcome-screen'>
+						<section className="user-stats-laptop">
+							<div className="stats">
+								<div className="welcome-screen">
 									<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
-									<p> Here are your stats:</p>
-									<p> <strong>Correct:</strong> {this.props.protectedData.correct} <strong>Incorrect:</strong> {this.props.protectedData.incorrect}</p>
-                                    </div>
-                                    <div className='ready-screen'>
-									<p className='ready'>Ready to Learn?</p>
-									<Link to="/play">
-										<button className='play-button' type="button">Let's Play!</button>
-									</Link>
-                                    </div>
-                                    </div>
-							</section>
+									<button
+						className="play-button"
+						onClick={() => {
+							this.props.dispatch(stats_modalOn());
+						}}
+					>
+						stats
+						</button>
+								</div>
+					
+								
+										<button className="play-button" type="button">
+										<Link to="/play">
+											Let's Learn!
+											</Link>
+										</button>
+								
+					
+							</div>
+						</section>
 					</section>
+
+					<ReactModal
+						isOpen={this.props.statsmodal}
+						contentLabel="onRequestClose Example"
+						onRequestClose={this.handleCloseModal}
+						shouldCloseOnOverlayClick={false}
+						className="Modal"
+						ariaHideApp={false}
+					>
+						<Modal ModalOff={() => this.props.dispatch(stats_modalOff())} />
+					</ReactModal>
 				</section>
 			</React.Fragment>
 		);
@@ -45,7 +68,8 @@ const mapStateToProps = (state) => {
 		username: state.auth.currentUser.username,
 		id: state.auth.currentUser.id,
 		name: `${currentUser.firstName} ${currentUser.lastName}`,
-		protectedData: state.protectedData.data
+		protectedData: state.protectedData.data,
+		statsmodal: state.modal.showStatsModal
 	};
 };
 

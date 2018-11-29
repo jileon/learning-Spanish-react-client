@@ -4,24 +4,37 @@
   background: #244242;
 }
 
+
+.dashboard{
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;
+  overflow:hidden;
+  background: url('../images/deskdash-lg.png') no-repeat center bottom;
+  background-size: 100% 94%;
+  margin: 40px auto;    
+}
+
+
+
 h4{
   font-family: ff-prater-block-web, sans-serif;
-  font-size: 25px;
+  font-size: 40px;
 }
-/* .play-button{
-  background: orange;
+
+.user-stats-laptop{
+  background: url('../images/computer.png') no-repeat bottom center;
+  background-size: 80%;
+  min-width: 500px;
   position: relative;
- bottom: 0px;
- height: 100px;
-} */
-
-
+  top:65px;
+}
 
 .play-button {
   display: inline-block;
   border: solid 1px black;
   margin-top: 20px;
-  width: 40%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -44,7 +57,7 @@ h4{
 }
 
 
-.ready-screen a{
+.stats a{
   text-decoration: none;
 
 }
@@ -74,105 +87,146 @@ h4{
   transition:800ms ease all;
 }
 
+.Modal {
+  position: relative;
+  background-color: black;
+  width:60%;
+  max-width: 700px;
+  height:380px;
+  border: 2px solid orange;
+  top: 300%;
+  z-index: 100;
+  opacity: .9;   
+  margin: 0 auto;
+}
+
+.stats-modal{
+
+  position: relative;
+  top: 10px;
+  margin-top: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.stats-modal h1{
+  width: 90%;
+  text-align: center;
+  color:white;
+  font-size: 50px;
+}
+
+.stats-modal p{
+
+  text-align: center;
+  color:white;
+  font-size: 20px;
+}
 
 
+.modalButton{
+  background: #1AAB8A;
+}
+
+
+.stats{
+  border: 1px solid blue;
+  height: 30%;
+  display: inline-block;
+  padding: 20px;
+  line-height: 10px;
+  position: relative;
+  top:20%;
+}
 
 @media only screen and (min-width: 320px) {
   .dashboard{
-    /* transform: scale(1.2);  */
-    background: url('../images/deskdash-small.png') no-repeat center center;
-    background-size: contain;
-    object-fit: contain;
-    height: 590px; /* You must set a specified height */
-    background-position: 10% 99%; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: 100%; /* Resize the background image to cover the entire container */  
-    
+    width: 100vw;
+    height: 100vh;
+    max-height: 700px;
+    max-width: 1000px;
+    overflow:hidden;
+    background: url('../images/deskdash-small.png') no-repeat center bottom;
+    background-size: 100% 94%;
+    margin: 40px auto;    
   }
-  
+
   .user-stats-laptop{
-    background: url('../images/laptop.png') no-repeat bottom center;
-    background-size: 60% 40%;
-    min-width: 320px;
-    height: 400px;
+    background: url('../images/computer.png') no-repeat bottom center;
+    background-size: 80%;
+    min-width: 500px;
     position: relative;
     top:65px;
-  }
-
-  .stats{
-    display: block;
-    position: absolute;
-    top:54%;
-    left: 25%;
-    width: 50%;
-    height:50%;
-    line-height: 30%;
+    border: 1px solid pink;
   }
 
 
+  .user-stats-laptop{
+   
+  background-size: 80%; 
+  display: block;
+  text-align: center;
+  position: relative;
+  top:28%;
+  overflow:hidden;
+  left: 0%;
+  height:50%;
+border: 1px solid paleturquoise;
+  }
+
   }
 
 
-  @media only screen and (min-width:700px){
-    .dasboard-container{
-      background: #244242;
-    }
-    
-    
+  @media only screen and (min-width:600px){
     .dashboard{
       width: 100vw;
       height: 100vh;
-      max-width: 1000px;  
+      max-height: none;
+      max-width: 1000px;
       overflow:hidden;
       background: url('../images/deskdash-lg.png') no-repeat center bottom;
       background-size: 100% 94%;
       margin: 40px auto;    
     }
-    
-    .dashboard section{
-      /* border: solid 1px black; */
-      /* text-align: center; */
-    }
-    
-    
-    
-    
-    .user-stats-laptop{
-      background: url('../images/laptop.png') no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: 60%; 
-    display: block;
-    text-align: center;
-    position: relative;
-    top:20%;
-    left: 10%;
-    height:70%;
-    width:80%;
-    overflow:hidden;
-    }
-    .stats{
-    
-      display: block;
-      position: absolute;
-      top:35%;
-      left: 25%;
-      /* display: flex;
-      justify-content: center; */
-      width: 47%;
-      color: rgb(39, 3, 9);
-    }
 
+    .dasboard-container{
+      background: #244242;
+    }
+    
+       
+    .user-stats-laptop{
+
+      background-size: 60%; 
+
+    top:20%;
+    left: 0%;
+    height:70%;
+    border: 1px solid rgb(240, 72, 5);
+    }
+  
  
   }
 
 
 
+
+
+
+
   @media only screen and (min-width:870px){
      
+.dashboard{
+  width: 100vw;
+  height: 100vh;
+  max-height: none;
+  max-width: 1000px;
+  overflow:hidden;
+  background: url('../images/deskdash-lg.png') no-repeat center bottom;
+  background-size: 100% 94%;
+  margin: 40px auto;    
+}
     .user-stats-laptop{
-      background: url('../images/laptop.png') no-repeat center center;
+      background: url('../images/computer.png') no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -181,22 +235,12 @@ h4{
     text-align: center;
     position: relative;
     top:20%;
-    left: 10%;
+
     height:70%;
-    width:80%;
     overflow:hidden;
+    border: 1px solid rgb(79, 240, 5);
     }
-    .stats{
-    
-      display: block;
-      position: absolute;
-      top:35%;
-      left: 25%;
-      /* display: flex;
-      justify-content: center; */
-      width: 47%;
-      color: rgb(39, 3, 9);
-    }
+  
 
  
   }
