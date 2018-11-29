@@ -11,11 +11,7 @@ export default function Intro(props) {
         <section className="intro-text">
           <h2>Welcome to Learning Spanish</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est
-            neque, posuere eu ipsum eu, interdum tincidunt magna. Pellentesque
-            quis laoreet odio. Phasellus finibus interdum luctus. Maecenas eu
-            accumsan sapien, id dapibus mi. Mauris molestie imperdiet orci,
-            facilisis ultrices tortor pharetra nec.
+            Are you ready to start your adventure of learning a language more than 400 million people speak? You have come to the right place.
           </p>
         </section>
       </section>

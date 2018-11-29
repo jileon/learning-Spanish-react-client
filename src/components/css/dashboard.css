@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/ssa1qac.css");.
 
-dasboard-container{
+.dasboard-container{
   background: #244242;
 }
 
@@ -22,7 +22,7 @@ h4{
   border: solid 1px black;
   margin-top: 20px;
   width: 40%;
-  margin-left: auto;
+  margin-left: auto;s
   margin-right: auto;
   text-align: center;
 }
