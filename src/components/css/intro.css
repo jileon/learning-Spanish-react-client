@@ -36,9 +36,15 @@ padding:50px;
   top: 20%;
 }
 
-@media only screen and (min-width:700px ){
+@media only screen and (min-width:500px ){
   .learn-spanish-img{
     height: 30vh;
+  }
+}
+
+@media only screen and (min-width:800px ){
+  .learn-spanish-img{
+    height: 50vh;
   }
 }
 
