@@ -164,15 +164,61 @@ h4{
       color: rgb(39, 3, 9);
     }
 
-    .stats p{
-      padding: 1px;
+ 
+  }
 
+
+
+  @media only screen and (min-width:800px){
+    .dasboard-container{
+      background: #244242;
     }
-    /* .screen{
-      width:50%;
     
+    
+    .dashboard{
+      width: 100vw;
+      height: 100vh;
+      max-width: 1000px;  
+      overflow:hidden;
+      background: url('../images/deskdash-lg.png') no-repeat center bottom;
+      background-size: 100% 94%;
+      margin: 40px auto;    
     }
-    .welcome-screen{
-      all:unset;
-    } */
+    
+    .dashboard section{
+      /* border: solid 1px black; */
+      /* text-align: center; */
+    }
+    
+    
+    
+    
+    .user-stats-laptop{
+      background: url('../images/laptop.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 60%; 
+    display: block;
+    text-align: center;
+    position: relative;
+    top:20%;
+    left: 10%;
+    height:70%;
+    width:80%;
+    overflow:hidden;
+    }
+    .stats{
+    
+      display: block;
+      position: absolute;
+      top:35%;
+      left: 25%;
+      /* display: flex;
+      justify-content: center; */
+      width: 47%;
+      color: rgb(39, 3, 9);
+    }
+
+ 
   }

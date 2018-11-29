@@ -82,12 +82,10 @@ export const fetchProtectedData =() => (dispatch, getState) => {
 
 
 export const updateStats= (id, correct, incorrect)=>(dispatch, getState)=>{
-    console.log('update stats')
     const authToken = getState().auth.authToken;
     const data = getState().protectedData.data;
     data.correct=correct;
     data.incorrect=incorrect;
-    console.log(data);
     return axios(`${API_BASE_URL}/stats/${id}`, {
         method: 'PUT',
         data:data ,
