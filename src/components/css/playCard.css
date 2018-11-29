@@ -9,7 +9,7 @@
   z-index: 2;
   background: rgba(249, 249, 249, 0.72);
   border: 1px solid #006b6e;
-  border-radius: 77px;
+  border-radius: 20px;
 }
 
 .card h3 {
@@ -22,7 +22,7 @@
   position: relative;
   top: -20px;
   height: 50x;
-  border-radius: 9px;
+  border-radius: 1px;
   display: flex;
   justify-content: center;
 }
