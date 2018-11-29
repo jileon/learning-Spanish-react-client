@@ -2,9 +2,66 @@
   background: #244242;
 }
 
-.play-button{
+/* .play-button{
   background: orange;
+  position: relative;
+ bottom: 0px;
+ height: 100px;
+} */
+
+
+
+.play-button {
+  display: block;
+  border: solid 1px black;
+  margin-top: 20px;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+.play-button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.play-button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.play-button:before, .play button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.user-form button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.user-form button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
 
 @media only screen and (min-width: 320px) {
   .dashboard{
@@ -15,9 +72,8 @@
     height: 590px; /* You must set a specified height */
     background-position: 10% 99%; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: 100%; /* Resize the background image to cover the entire container */
-
-
+    background-size: 100%; /* Resize the background image to cover the entire container */  
+    
   }
   
   .user-stats-laptop{
@@ -30,26 +86,23 @@
   }
 
   .stats{
-
     display: block;
     position: absolute;
-    top:64%;
+    top:54%;
     left: 25%;
-    display: flex;
-    justify-content: center;
     width: 50%;
-  
+    height:50%;
   }
-
+/* 
   .welcome-screen{
     position: absolute;
     bottom:150px;
-  }
+  } */
 
-  .ready-screen{
+  /* .ready-screen{
     position: absolute;
     top:10px;
-  }
+  } */
 
   }
 
@@ -65,9 +118,9 @@
       height: 100vh;
       max-width: 1000px;  
       overflow:hidden;
-      background: url('../images/desk-nl.png') no-repeat center bottom;
+      background: url('../images/deskdash-lg.png') no-repeat center bottom;
       background-size: 100% 94%;
-      margin: 0 auto;    
+      margin: 40px auto;    
     }
     
     .dashboard section{
@@ -87,7 +140,7 @@
     display: block;
     text-align: center;
     position: relative;
-    top:15%;
+    top:20%;
     left: 10%;
     height:70%;
     width:80%;
@@ -97,18 +150,23 @@
     
       display: block;
       position: absolute;
-      top:40%;
+      top:35%;
       left: 25%;
-      display: flex;
-      justify-content: center;
-      width: 50%;
-    
+      /* display: flex;
+      justify-content: center; */
+      width: 47%;
+      color: rgb(158, 20, 43);
     }
-    .screen{
+
+    .stats p{
+      padding: 1px;
+
+    }
+    /* .screen{
       width:50%;
     
     }
     .welcome-screen{
       all:unset;
-    }
+    } */
   }

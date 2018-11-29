@@ -22,8 +22,7 @@ export class Dashboard extends React.Component {
                             <div className='welcome-screen'>
 									<p> WELCOME {this.props.username.toUpperCase()}!</p>
 									<p> Here are your stats:</p>
-									<p> Correct: {this.props.protectedData.correct}</p>
-									<p> Incorrect: {this.props.protectedData.incorrect}</p>
+									<p> <strong>Correct:</strong> {this.props.protectedData.correct} <strong>Incorrect:</strong> {this.props.protectedData.incorrect}</p>
                                     </div>
                                     <div className='ready-screen'>
 									<p className='ready'>Ready to Learn?</p>
