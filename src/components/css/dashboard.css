@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/ssa1qac.css");.
+@import url("https://use.typekit.net/ssa1qac.css");
 
 .dasboard-container{
   background: #244242;
@@ -169,30 +169,8 @@ h4{
 
 
 
-  @media only screen and (min-width:800px){
-    .dasboard-container{
-      background: #244242;
-    }
-    
-    
-    .dashboard{
-      width: 100vw;
-      height: 100vh;
-      max-width: 1000px;  
-      overflow:hidden;
-      background: url('../images/deskdash-lg.png') no-repeat center bottom;
-      background-size: 100% 94%;
-      margin: 40px auto;    
-    }
-    
-    .dashboard section{
-      /* border: solid 1px black; */
-      /* text-align: center; */
-    }
-    
-    
-    
-    
+  @media only screen and (min-width:870px){
+     
     .user-stats-laptop{
       background: url('../images/laptop.png') no-repeat center center;
       -webkit-background-size: cover;
