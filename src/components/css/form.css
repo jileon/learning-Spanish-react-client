@@ -88,3 +88,31 @@ margin-right: auto;
  label {
   margin-top: 20px;
  }
+
+ @media only screen and (max-width: 500px) {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: grey;
+    text-align: left;
+    font-size: 14px;
+    font-style: italic;
+  
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: grey;
+    text-align: left;
+    font-style: italic;
+    font-size: 14px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: grey;
+    text-align: left;
+    font-style: italic;
+    font-size: 14px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: grey;
+    text-align: center;
+    font-style: left;
+    font-size: 14px;
+  }
+ }

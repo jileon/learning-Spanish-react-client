@@ -16,19 +16,16 @@ body {
   max-width:100vw;
 }
 
-
-
 .header-bar, .header-bar-logged{
   background: rgb(78, 135, 161);
   position: fixed;
   border-bottom: 1px solid black;
-  height:80px;
+  height:11vh;
   width: 100%;
   max-width: 100vw;
   top: 0px;
   z-index: 3;
 }
-
 
 h1 {
   margin: 0;

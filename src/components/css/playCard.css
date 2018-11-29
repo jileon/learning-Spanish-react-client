@@ -10,9 +10,15 @@
   border: 1px solid #006b6e;
   border-radius: 77px;
 }
+
 .card h3 {
   text-align: center;
 }
+
+
+/* .userAnswer {
+  font-size: 20px;
+} */
 
 .current-word {
   background: #e97c4d;
@@ -20,28 +26,92 @@
   top: -20px;
   height: 50x;
   border-radius: 9px;
+  display: flex;
+  justify-content: center;
 }
+
 .user-form {
   display: block;
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  /* border: solid 2px black; */
 }
 
 .user-form button {
   display: block;
   border: solid 1px black;
   margin-top: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.user-form button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.user-form button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.user-form button:before, .user-form button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.user-form button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.user-form button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
 
 .user-form input {
   display: block;
   border: solid 1px black;
   height: 40px;
+  width: 75%;
   padding: 10px;
 }
 
 .feedback {
   height: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .user-form input {
+    width: 70%;
+  }
+
+  .user-form button {
+    margin-top: 15px;
+    height: 30px;
+  }
+
+  .current-word {
+    top: -10px;
+  }
 }
