@@ -19,16 +19,16 @@ export class Dashboard extends React.Component {
 					<section className="dashboard">
 							<section className="user-stats-laptop">
                             <div className='stats'>
-                            <div className='screen'>
+                            <div className='welcome-screen'>
 									<p> WELCOME {this.props.username.toUpperCase()}!</p>
 									<p> Here are your stats:</p>
 									<p> Correct: {this.props.protectedData.correct}</p>
 									<p> Incorrect: {this.props.protectedData.incorrect}</p>
                                     </div>
-                                    <div className='screen'>
-									<p>Ready to Learn?</p>
+                                    <div className='ready-screen'>
+									<p className='ready'>Ready to Learn?</p>
 									<Link to="/play">
-										<button type="button">Let's Play!</button>
+										<button className='play-button' type="button">Let's Play!</button>
 									</Link>
                                     </div>
                                     </div>

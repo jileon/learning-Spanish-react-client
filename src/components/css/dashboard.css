@@ -2,84 +2,113 @@
   background: #244242;
 }
 
-
-.dashboard{
-  width: 100vw;
-  height: 100vh;
-  max-width: 1000px;  
-  min-width: 700px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column; */
-  overflow:hidden;
-  background: url('../images/desk-nl.png') no-repeat center bottom;
-  background-size: 100% 94%;
-  margin: 0 auto;
-  /* padding-left: 90px; */
-
-
+.play-button{
+  background: orange;
 }
 
-.dashboard section{
-  /* border: solid 1px black; */
-  /* text-align: center; */
-}
-
-
-
-
-.user-stats-laptop{
-  background: url('../images/laptop.png') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 60%; 
-display: block;
-text-align: center;
-position: relative;
-top:15%;
-height:70%;
-width:80%;
-overflow:hidden;
-}
-.stats{
-
-  display: block;
-  position: absolute;
-  top:34%;
-  left: 25%;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-
-}
-
-.screen{
-  width:50%;
-
-}
-
-/*
 @media only screen and (min-width: 320px) {
   .dashboard{
-    width: 100vw;
-    height: 100vh;
-    max-width: 1000px;  
-    min-width: 700px;
+    /* transform: scale(1.2);  */
+    background: url('../images/deskdash-small.png') no-repeat center center;
+    background-size: contain;
+    object-fit: contain;
+    height: 590px; /* You must set a specified height */
+    background-position: 10% 99%; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; /* Resize the background image to cover the entire container */
+
+
+  }
+  
+  .user-stats-laptop{
+    background: url('../images/laptop.png') no-repeat bottom center;
+    background-size: 60% 40%;
+    min-width: 320px;
+    height: 400px;
+    position: relative;
+    top:65px;
+  }
+
+  .stats{
+
+    display: block;
+    position: absolute;
+    top:64%;
+    left: 25%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width: 50%;
+  
+  }
+
+  .welcome-screen{
+    position: absolute;
+    bottom:150px;
+  }
+
+  .ready-screen{
+    position: absolute;
+    top:10px;
+  }
+
+  }
+
+
+  @media only screen and (min-width:700px){
+    .dasboard-container{
+      background: #244242;
+    }
+    
+    
+    .dashboard{
+      width: 100vw;
+      height: 100vh;
+      max-width: 1000px;  
+      overflow:hidden;
+      background: url('../images/desk-nl.png') no-repeat center bottom;
+      background-size: 100% 94%;
+      margin: 0 auto;    
+    }
+    
+    .dashboard section{
+      /* border: solid 1px black; */
+      /* text-align: center; */
+    }
+    
+    
+    
+    
+    .user-stats-laptop{
+      background: url('../images/laptop.png') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: 60%; 
+    display: block;
     text-align: center;
-    flex-direction: column;
-  
-    background: url('../images/deskdash.png') no-repeat center bottom;
-    background-size: 100% 94%;
-    margin: 0 auto;
-     padding-left: 90px; 
-  
+    position: relative;
+    top:15%;
+    left: 10%;
+    height:70%;
+    width:80%;
+    overflow:hidden;
+    }
+    .stats{
+    
+      display: block;
+      position: absolute;
+      top:40%;
+      left: 25%;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    
+    }
+    .screen{
+      width:50%;
+    
+    }
+    .welcome-screen{
+      all:unset;
+    }
   }
-  
-  }
-  */
