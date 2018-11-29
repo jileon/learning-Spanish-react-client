@@ -1,7 +1,13 @@
-.dasboard-container{
+@import url("https://use.typekit.net/ssa1qac.css");.
+
+dasboard-container{
   background: #244242;
 }
 
+h4{
+  font-family: ff-prater-block-web, sans-serif;
+  font-size: 25px;
+}
 /* .play-button{
   background: orange;
   position: relative;
@@ -12,10 +18,10 @@
 
 
 .play-button {
-  display: block;
+  display: inline-block;
   border: solid 1px black;
   margin-top: 20px;
-  width: 45%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -26,14 +32,21 @@
   color:#fff;
   border:none;
   position:relative;
-  font-size: 20px;
-  height: 50px;
+  font-size: 16px;
+  height: 30px;
   display: flex;
   justify-content: center;
   padding:0 2em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+
+}
+
+
+.ready-screen a{
+  text-decoration: none;
+
 }
 .play-button:hover{
   background:#fff;
@@ -48,14 +61,15 @@
   width:0;
   background: #1AAB8A;
   transition:400ms ease all;
+
 }
-.user-form button:after{
+.play-button:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-.user-form button:hover:before,button:hover:after{
+.play-button:hover:before, .play-button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
@@ -92,17 +106,9 @@
     left: 25%;
     width: 50%;
     height:50%;
+    line-height: 30%;
   }
-/* 
-  .welcome-screen{
-    position: absolute;
-    bottom:150px;
-  } */
 
-  /* .ready-screen{
-    position: absolute;
-    top:10px;
-  } */
 
   }
 
@@ -155,7 +161,7 @@
       /* display: flex;
       justify-content: center; */
       width: 47%;
-      color: rgb(158, 20, 43);
+      color: rgb(39, 3, 9);
     }
 
     .stats p{

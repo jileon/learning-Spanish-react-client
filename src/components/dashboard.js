@@ -20,7 +20,7 @@ export class Dashboard extends React.Component {
 							<section className="user-stats-laptop">
                             <div className='stats'>
                             <div className='welcome-screen'>
-									<p> WELCOME {this.props.username.toUpperCase()}!</p>
+									<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
 									<p> Here are your stats:</p>
 									<p> <strong>Correct:</strong> {this.props.protectedData.correct} <strong>Incorrect:</strong> {this.props.protectedData.incorrect}</p>
                                     </div>

@@ -92,11 +92,13 @@ h1 {
 .user-page {
   display: flex;
   justify-content: center;
+
 }
 
 .user-area {
   width: 50vw;
-  border: solid black 1px;
+  border: solid rgba(102, 98, 98, 0.658) 1px;
+
 }
 
 div {
