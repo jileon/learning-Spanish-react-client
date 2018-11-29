@@ -1,49 +1,47 @@
-
-.card{
+.card {
   border: solid 1px red;
   width: 50%;
-  height:40vh;
+  height: 40vh;
   max-width: 600px;
   position: relative;
-  margin-top:35px;
+  margin-top: 35px;
   z-index: 2;
-background: rgba(249, 249, 249, 0.72);
-border: 1px solid #006B6E;
-border-radius: 77px;
+  background: rgba(249, 249, 249, 0.72);
+  border: 1px solid #006b6e;
+  border-radius: 77px;
 }
-.card h3{
+.card h3 {
   text-align: center;
 }
 
-.current-word{
-  background: #E97C4D;
+.current-word {
+  background: #e97c4d;
   position: relative;
-  top:-20px;
+  top: -20px;
   height: 50x;
   border-radius: 9px;
-
 }
-.user-form{
-  display:block;
+.user-form {
+  display: block;
   padding: 20px;
-display: flex;
-justify-content: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.user-form button{
-  display:block;
+.user-form button {
+  display: block;
   border: solid 1px black;
   margin-top: 20px;
 }
 
-.user-form input{
-  display:block;
+.user-form input {
+  display: block;
   border: solid 1px black;
   height: 40px;
   padding: 10px;
 }
 
-.feedback{
+.feedback {
   height: 30px;
 }
