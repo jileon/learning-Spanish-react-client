@@ -52,7 +52,6 @@ export class PlayCard extends React.Component {
 	}
 
 	feedbackMode = ()=>{
-		let userAnswer;
 		return(
 		<section className="card">
 		<div className="current-word">

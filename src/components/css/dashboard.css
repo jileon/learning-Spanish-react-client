@@ -1,12 +1,85 @@
+.dasboard-container{
+  background: #244242;
+}
+
+
 .dashboard{
-  margin-top: 100px;
-  border: 1px solid black;
-  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1000px;  
+  min-width: 700px;
+  /* display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; */
+  overflow:hidden;
+  background: url('../images/desk-nl.png') no-repeat center bottom;
+  background-size: 100% 94%;
+  margin: 0 auto;
+  /* padding-left: 90px; */
+
+
 }
 
 .dashboard section{
-  border: solid 1px black;
-  text-align: center;
+  /* border: solid 1px black; */
+  /* text-align: center; */
 }
+
+
+
+
+.user-stats-laptop{
+  background: url('../images/laptop.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 60%; 
+display: block;
+text-align: center;
+position: relative;
+top:15%;
+height:70%;
+width:80%;
+overflow:hidden;
+}
+.stats{
+
+  display: block;
+  position: absolute;
+  top:34%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+}
+
+.screen{
+  width:50%;
+
+}
+
+/*
+@media only screen and (min-width: 320px) {
+  .dashboard{
+    width: 100vw;
+    height: 100vh;
+    max-width: 1000px;  
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  
+    background: url('../images/deskdash.png') no-repeat center bottom;
+    background-size: 100% 94%;
+    margin: 0 auto;
+     padding-left: 90px; 
+  
+  }
+  
+  }
+  */
