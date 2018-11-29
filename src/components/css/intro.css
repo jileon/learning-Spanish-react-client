@@ -15,8 +15,13 @@ margin-top:20px;
 
 }
 
+.page-container {
+  width: 100vw;
+}
+
 .learn-spanish-img{
   height: 50vh;
+  max-width: 100vw;
 }
 .learn-spanish-img img{
 display: block;
@@ -36,4 +41,35 @@ padding:50px;
   width: 100%;
   position: relative;
   top: 20%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .intro-text {
+    margin-top: 0;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    }
+
+    .learn-spanish-img img {
+      width: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  .learn-spanish-img img {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .learn-spanish-img img {
+    width: 85%;
+  }
+
+  /* .learn-spanish-img  {
+    border: solid 1px black;
+    width: 100vw;
+  } */
 }
