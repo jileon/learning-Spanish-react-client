@@ -27,8 +27,12 @@ body {
   z-index: 3;
 }
 
+.header-bar {
+  background: #FFB201
+}
+
 h1 {
-  margin: 0;
+  margin-top: 2.75vh;
   margin-left: 20px;
   font-family: ff-prater-block-web, sans-serif;
   font-weight: 400;
@@ -59,7 +63,7 @@ h1 {
 .navLinks {
   text-align: right;
   position: absolute;
-  top: -10px;
+  top: -2.75vh;
   right: 25px;
 }
 
@@ -88,13 +92,11 @@ h1 {
 .user-page {
   display: flex;
   justify-content: center;
-
 }
 
 .user-area {
   width: 50vw;
   border: solid black 1px;
-
 }
 
 div {
@@ -135,7 +137,7 @@ div {
 
   .navigation-bar h1 {
     font-size: 20px;
-    margin-left: 0;
+    margin-left: 10px;
   }
 
 }
