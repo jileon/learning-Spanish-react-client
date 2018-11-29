@@ -18,8 +18,8 @@ body {
 
 
 
-.header-bar{
-  background: #FFB201;
+.header-bar, .header-bar-logged{
+  background: rgb(78, 135, 161);
   position: fixed;
   border-bottom: 1px solid black;
   height:80px;
@@ -30,20 +30,6 @@ body {
 }
 
 
-.header-bar-logged, .header-bar {
-  background: rgb(78, 135, 161);
-  position: fixed;
-  border-bottom: 1px solid black;
-  height:80px;
-  width: 100%;
-  top: 0px;
-  z-index: 3;
-}
-
-.header-bar {
-  background: #ffb201;
-}
-
 h1 {
   margin: 0;
   margin-left: 20px;
@@ -51,25 +37,26 @@ h1 {
   font-weight: 400;
   font-size: 30px;
   font-style: normal;
+  width: 50%;
 }
 
 .navigation-bar {
-  padding: 10px;
+  /* padding: 10px;
   background: rgb(78, 135, 161);
-  height:60px;
+  height:60px; */
 }
 
 .navigation-bar h1,
 .navigation-bar nav,
 .navigation-bar-nav li {
   display: inline-block;
-  line-height: 70px;
   /* vertical-align: middle; */
 }
 
 .navigation-bar-nav li {
   margin-right: 20px;
   text-align: right;
+  padding-top: 20px;
 }
 
 .navLinks {
