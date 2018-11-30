@@ -14,8 +14,8 @@ This is an application where you can learn some simple words in Spanish.
   - It was built in one week using a spaced repetition algorithm
   - Although we both worked on both the front and back end, Janet's primary focus was on the front-end and Aaron's on the back-end
 
-  - You can find more of Janet's work and contact information here:
-  - You can find more of Aaron's work and contact information here: 
+  - You can find more of Janet's work and contact information here: https://iamjanetleon.com
+  - You can find more of Aaron's work and contact information here: https://aaron-whitehead.herokuapp.com
 
 # How do I play?
 
