@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
 import {resetFeedback} from '../actions/protected-data';
-import DropdownMenu from './dropdown-menu';
+
 export class Navigation extends React.Component {
 	logOut() {
 		this.props.dispatch(resetFeedback());
@@ -19,10 +19,7 @@ export class Navigation extends React.Component {
 					<a href="#home">Learning Spanish</a>
 				</h1>
 				<nav className="navigation-bar-nav">
-				<DropdownMenu
-				link1={<a href='#register'>register</a>}
-				link2={<a href='#login'>login</a>}
-				/>
+		
 					<ul className="navLinks">
 						<li>
 							<a href="#register">Register</a>
@@ -43,10 +40,6 @@ export class Navigation extends React.Component {
 				<Link to="/dashboard">Learning Spanish</Link>
 				</h1>
 				<nav className="navigation-bar-nav">
-				<DropdownMenu
-					link1={<Link to="/dashboard">Dashboard</Link>}
-					link2={<Link to="/play">Play</Link>}
-				/>
 					<ul className="navLinks">
 						<li>
 							<Link to="/dashboard">Dashboard</Link>
