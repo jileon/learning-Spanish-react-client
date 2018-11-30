@@ -13,7 +13,7 @@ export class PlayArea extends React.Component {
 
     return (
       <React.Fragment>
-        <HeaderBar className="header-bar-logged" />
+        <HeaderBar className="header-bar-play" />
         <section id="#play-area" className="play-page">
         <PlayCard />
           <section className="houses">

@@ -17,8 +17,8 @@ body {
 
 }
 
-.header-bar, .header-bar-logged{
-  background: rgb(78, 135, 161);
+.header-bar, .header-bar-logged, .header-bar-play{
+  background: #FFB201;
   position: fixed;
   border-bottom: 1px solid black;
   height:11vh;
@@ -28,8 +28,8 @@ body {
   z-index: 3;
 }
 
-.header-bar {
-  background: #FFB201
+.header-bar-play {
+  background: rgb(78, 135, 161);  
 }
 
 h1 {
@@ -64,20 +64,34 @@ h1 {
 .navLinks {
   text-align: right;
   position: absolute;
-  top: -2.75vh;
+  top: -0.75vh;
   right: 25px;
 }
 
 .navigation-bar h1 a {
   color: rgb(21, 0, 27);
 }
+
+
 .navLinks a {
   color: #58513f;
 }
 
+.header-bar-play .navLinks a{
+  color: rgb(230, 228, 228);
+}
+
+
+.header-bar-play h1 a{
+  color: rgb(37, 36, 36);
+}
+
+
+
+
 #home h2 {
   text-align: center;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 
 #home p {
@@ -119,6 +133,7 @@ div {
 
   .navLinks li {
     font-size: 16px;
+   
   }
 
   .user-page {
@@ -165,4 +180,22 @@ div {
   }
 
 }
+
+@media only screen and (min-width: 1000px) {
+  .navLinks li {
+    font-size: 22px;
+    margin-right: 10px;
+  }
+
+  .navLinks {
+    right: 10;
+  }
+
+  .navigation-bar h1 {
+    font-size: 40px;
+    margin-left: 30px;
+  }
+
+}
+
 
