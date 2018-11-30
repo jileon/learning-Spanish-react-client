@@ -63,6 +63,12 @@ h4{
   color:#fff;
 }
 
+.stats a:hover{
+  text-decoration: none;
+  color:#1AAB8A;
+}
+
+
 .play-button{
   background:#1AAB8A;
   color:#fff;
