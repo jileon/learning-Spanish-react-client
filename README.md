@@ -14,8 +14,8 @@ This is an application where you can learn some simple words in Spanish.
   - It was built in one week using a spaced repetition algorithm
   - Although we both worked on both the front and back end, Janet's primary focus was on the front-end and Aaron's on the back-end
 
-  - You can find more of Janet's work and contact information here:
-  - You can find more of Aaron's work and contact information here: 
+  - You can find more of Janet's work and contact information here: https://iamjanetleon.com
+  - You can find more of Aaron's work and contact information here: https://aaron-whitehead.herokuapp.com
 
 # How do I play?
 
@@ -43,7 +43,7 @@ If you do create your own account:
 ### Installation
 
 If you want to clone this repo and make changes for yourself, make sure you npm install in your terminal :)
-If you want to make changes to the server as well, clone this repo: https://github.com/thinkful-ei24/aaron-janet-spaced-repitition-server
+If you want to make changes to the server as well, clone this repo: https://github.com/thinkful-ei24/aaron-janet-spaced-repetition-server
 
 ### Future Plans
 
@@ -52,6 +52,9 @@ The game is currently in a quite simple state, as there aren't many words to lea
 
 ### Screenshots
 
+![Imgur](https://i.imgur.com/6OVkUpC.png)
+![Imgur](https://i.imgur.com/Ktb3dnx.png)
+![Imgur](https://i.imgur.com/Z1OOM4f.png)
 
 
 ### Code
