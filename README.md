@@ -43,7 +43,7 @@ If you do create your own account:
 ### Installation
 
 If you want to clone this repo and make changes for yourself, make sure you npm install in your terminal :)
-If you want to make changes to the server as well, clone this repo: https://github.com/thinkful-ei24/aaron-janet-spaced-repitition-server
+If you want to make changes to the server as well, clone this repo: https://github.com/thinkful-ei24/aaron-janet-spaced-repetition-server
 
 ### Future Plans
 
