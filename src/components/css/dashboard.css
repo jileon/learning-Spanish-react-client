@@ -230,7 +230,7 @@ h4{
 
 }
 
-@media  screen and  (min-height: 900px)  {
+@media  screen and  (min-height: 750px)  {
 
   @media  screen and  (min-width: 400px)  {
    /*enter css here to apply for both condition*/
@@ -267,10 +267,8 @@ h4{
   }
 
   }
-}
 
 
-@media  screen and  (min-height: 900px)  {
   @media  screen and  (min-width: 575px)  {
    /*enter css here to apply for both condition*/
    h4{
@@ -297,10 +295,8 @@ h4{
   
 
 }
-}
 
 
-@media  screen and  (min-height: 900px)  {
   @media  screen and  (min-width: 768px)  {
    /*enter css here to apply for both condition*/
    h4{
@@ -322,7 +318,7 @@ h4{
 
 }
 
-@media  screen and  (min-width: 1300px)  {
+@media  screen and  (min-width: 900px)  {
   /*enter css here to apply for both condition*/
   h4{
    height: 25px;
