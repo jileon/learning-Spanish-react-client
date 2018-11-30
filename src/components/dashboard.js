@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactModal from 'react-modal';
 import './css/dashboard.css';
+import './css/modal.css';
 import { connect } from 'react-redux';
 import { fetchProtectedData } from '../actions/protected-data';
 import { Link } from 'react-router-dom';
 import { stats_modalOff, stats_modalOn } from '../actions/modal-actions';
 import requiresLogin from './requires-login';
 import HeaderBar from './header-bar';
-import Modal from './modal_content';
+import Modal_Screen from './modal';
 
 export class Dashboard extends React.Component {
 	componentDidMount() {
@@ -18,6 +19,7 @@ export class Dashboard extends React.Component {
 		return (
 			<React.Fragment>
 				<HeaderBar className="header-bar-logged" />
+				<div id="dashboard" />
 				<section className="dasboard-container">
 					<section className="dashboard">
 						<section className="user-stats-laptop">
@@ -25,38 +27,24 @@ export class Dashboard extends React.Component {
 								<div className="welcome-screen">
 									<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
 									<button
-						className="play-button"
-						onClick={() => {
-							this.props.dispatch(stats_modalOn());
-						}}
-					>
-						stats
-						</button>
+										className="play-button"
+										onClick={() => {
+											this.props.dispatch(stats_modalOn());
+										}}
+									>
+										stats
+									</button>
 								</div>
-					
-								
-										<button className="play-button" type="button">
-										<Link to="/play">
-											Let's Learn!
-											</Link>
-										</button>
-								
-					
+
+								<button className="play-button" type="button">
+									<Link to="/play">Let's Learn!</Link>
+								</button>
 							</div>
 						</section>
 					</section>
-
-					<ReactModal
-						isOpen={this.props.statsmodal}
-						contentLabel="onRequestClose Example"
-						onRequestClose={this.handleCloseModal}
-						shouldCloseOnOverlayClick={false}
-						className="Modal"
-						ariaHideApp={false}
-					>
-						<Modal ModalOff={() => this.props.dispatch(stats_modalOff())} />
-					</ReactModal>
 				</section>
+
+				<Modal_Screen isOpen={this.props.statsmodal} ModalOff={()=>this.props.dispatch(stats_modalOff())}/>
 			</React.Fragment>
 		);
 	}

@@ -1,246 +1,34 @@
-@import url("https://use.typekit.net/ssa1qac.css");
-
-.dasboard-container{
+#dashboard{
+  height: 65px;
   background: #244242;
 }
 
-
-.dashboard{
+.dasboard-container{
+  background: #244242;
   width: 100vw;
   height: 100vh;
-  max-width: 1000px;
-  overflow:hidden;
-  background: url('../images/deskdash-lg.png') no-repeat center bottom;
-  background-size: 100% 94%;
-  margin: 40px auto;    
+  border: 1px solid salmon;
+  overflow: hidden;
 }
 
-
-
-h4{
-  font-family: ff-prater-block-web, sans-serif;
-  font-size: 40px;
+.dashboard{
+  width: 98%;
+  height:99vh;
+  max-width: 1000px;
+  overflow:hidden;
+  background: url('../images/deskdash-small.png') no-repeat center bottom;
+  background-size: cover;
+  margin: 0px auto;    
+  border: 1px solid palevioletred;
 }
 
 .user-stats-laptop{
   background: url('../images/computer.png') no-repeat bottom center;
-  background-size: 80%;
-  min-width: 500px;
+  background-size: contain;
+  width: 95%;
   position: relative;
-  top:65px;
+  top:10%;
+  border: 1px solid greenyellow;
+  height:65%;
 }
 
-.play-button {
-  display: inline-block;
-  border: solid 1px black;
-  margin-top: 20px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.play-button{
-  background:#1AAB8A;
-  color:#fff;
-  border:none;
-  position:relative;
-  font-size: 16px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-
-}
-
-
-.stats a{
-  text-decoration: none;
-
-}
-.play-button:hover{
-  background:#fff;
-  color:#1AAB8A;
-}
-.play-button:before, .play button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-
-}
-.play-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.play-button:hover:before, .play-button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-
-.Modal {
-  position: relative;
-  background-color: black;
-  width:60%;
-  max-width: 700px;
-  height:380px;
-  border: 2px solid orange;
-  top: 300%;
-  z-index: 100;
-  opacity: .9;   
-  margin: 0 auto;
-}
-
-.stats-modal{
-
-  position: relative;
-  top: 10px;
-  margin-top: 0px;
-  width: 100%;
-  text-align: center;
-}
-
-.stats-modal h1{
-  width: 90%;
-  text-align: center;
-  color:white;
-  font-size: 50px;
-}
-
-.stats-modal p{
-
-  text-align: center;
-  color:white;
-  font-size: 20px;
-}
-
-
-.modalButton{
-  background: #1AAB8A;
-}
-
-
-.stats{
-  border: 1px solid blue;
-  height: 30%;
-  display: inline-block;
-  padding: 20px;
-  line-height: 10px;
-  position: relative;
-  top:20%;
-}
-
-@media only screen and (min-width: 320px) {
-  .dashboard{
-    width: 100vw;
-    height: 100vh;
-    max-height: 700px;
-    max-width: 1000px;
-    overflow:hidden;
-    background: url('../images/deskdash-small.png') no-repeat center bottom;
-    background-size: 100% 94%;
-    margin: 40px auto;    
-  }
-
-  .user-stats-laptop{
-    background: url('../images/computer.png') no-repeat bottom center;
-    background-size: 80%;
-    min-width: 500px;
-    position: relative;
-    top:65px;
-    border: 1px solid pink;
-  }
-
-
-  .user-stats-laptop{
-   
-  background-size: 80%; 
-  display: block;
-  text-align: center;
-  position: relative;
-  top:28%;
-  overflow:hidden;
-  left: 0%;
-  height:50%;
-border: 1px solid paleturquoise;
-  }
-
-  }
-
-
-  @media only screen and (min-width:600px){
-    .dashboard{
-      width: 100vw;
-      height: 100vh;
-      max-height: none;
-      max-width: 1000px;
-      overflow:hidden;
-      background: url('../images/deskdash-lg.png') no-repeat center bottom;
-      background-size: 100% 94%;
-      margin: 40px auto;    
-    }
-
-    .dasboard-container{
-      background: #244242;
-    }
-    
-       
-    .user-stats-laptop{
-
-      background-size: 60%; 
-
-    top:20%;
-    left: 0%;
-    height:70%;
-    border: 1px solid rgb(240, 72, 5);
-    }
-  
- 
-  }
-
-
-
-
-
-
-
-  @media only screen and (min-width:870px){
-     
-.dashboard{
-  width: 100vw;
-  height: 100vh;
-  max-height: none;
-  max-width: 1000px;
-  overflow:hidden;
-  background: url('../images/deskdash-lg.png') no-repeat center bottom;
-  background-size: 100% 94%;
-  margin: 40px auto;    
-}
-    .user-stats-laptop{
-      background: url('../images/computer.png') no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: 60%; 
-    display: block;
-    text-align: center;
-    position: relative;
-    top:20%;
-
-    height:70%;
-    overflow:hidden;
-    border: 1px solid rgb(79, 240, 5);
-    }
-  
-
- 
-  }
