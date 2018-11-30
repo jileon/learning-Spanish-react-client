@@ -8,7 +8,6 @@ h4{
   font-size: 30px;
   margin-top: 0px;
   margin-bottom: 20px;   
-   background:yellow;
    height: 20px;
 }
 
@@ -22,7 +21,7 @@ h4{
   width: 98%;
   height:99vh;
   max-width: 1200px;
-  background: url('../images/deskdash-small.png') no-repeat center bottom;
+  background: url('../images/deskdash-small1.png') no-repeat center bottom;
   background-size: cover;
   margin: 0px auto;    
 }
@@ -190,7 +189,7 @@ h4{
     width: 90%;
     height:99vh;
     max-width: 1000px;
-    background: url('../images/deskdash-small.png') no-repeat center top;
+    background: url('../images/deskdash-small1.png') no-repeat center top;
     background-size: cover;
     margin: 0px auto;    
   }
@@ -237,7 +236,6 @@ h4{
    /*enter css here to apply for both condition*/
    h4{
     height: 25px;
-    background: pink;
   }
 
   .dashboard{
@@ -246,7 +244,7 @@ h4{
     max-width: 1000px;
     min-height:200px;
     max-height:800px;
-    background: url('../images/deskdash-small.png') no-repeat center bottom;
+    background: url('../images/deskdash-small1.png') no-repeat center bottom;
     background-size: cover;
     margin: 0px auto;    
   }
@@ -277,11 +275,11 @@ h4{
    /*enter css here to apply for both condition*/
    h4{
     height: 25px;
-    background: green;
+
   }
 
   #dashboard{
-    height: 100px;
+    height: 125px;
     background: #244242;
   }
 
@@ -291,7 +289,7 @@ h4{
     max-width: 1000px;
     min-height:200px;
     max-height:800px;
-    background: url('../images/deskdash-small.png') no-repeat center bottom;
+    background: url('../images/deskdash-small1.png') no-repeat center bottom;
     background-size: contain;
     margin: 0px auto;    
   }
@@ -307,13 +305,12 @@ h4{
    /*enter css here to apply for both condition*/
    h4{
     height: 25px;
-    background: blueviolet;
     font-size: 40px;
     margin-top:80px;
   }
 
   #dashboard{
-    height: 100px;
+    height: 125px;
     background: #244242;
   }
   
@@ -329,7 +326,6 @@ h4{
   /*enter css here to apply for both condition*/
   h4{
    height: 25px;
-   background: rgb(43, 226, 226);
    font-size: 40px;
    margin-top:80px;
  }
