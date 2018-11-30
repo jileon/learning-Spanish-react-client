@@ -52,6 +52,9 @@ The game is currently in a quite simple state, as there aren't many words to lea
 
 ### Screenshots
 
+[Imgur](https://i.imgur.com/6OVkUpC.png)
+[Imgur](https://i.imgur.com/Ktb3dnx.png)
+[Imgur](https://i.imgur.com/Z1OOM4f.png)
 
 
 ### Code
