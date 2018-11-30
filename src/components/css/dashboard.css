@@ -3,6 +3,13 @@
   background: #244242;
 }
 
+h4{
+  font-family: ff-prater-block-web, sans-serif;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
 .dasboard-container{
   background: #244242;
   width: 100vw;
@@ -30,5 +37,43 @@
   top:10%;
   border: 1px solid greenyellow;
   height:65%;
+}
+
+.stats{
+  border: 1px solid blue;
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  top: 40%;
+  height:40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  line-height: 0px;
+
+}
+
+.stats a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.play-button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  font-size: 16px;
+  height: 30px;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin:4px;
+
+
 }
 

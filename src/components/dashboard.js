@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactModal from 'react-modal';
 import './css/dashboard.css';
 import './css/modal.css';
 import { connect } from 'react-redux';
@@ -8,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { stats_modalOff, stats_modalOn } from '../actions/modal-actions';
 import requiresLogin from './requires-login';
 import HeaderBar from './header-bar';
-import Modal_Screen from './modal';
+import ModalScreen from './modal';
 
 export class Dashboard extends React.Component {
 	componentDidMount() {
@@ -21,30 +20,33 @@ export class Dashboard extends React.Component {
 				<HeaderBar className="header-bar-logged" />
 				<div id="dashboard" />
 				<section className="dasboard-container">
+
 					<section className="dashboard">
+					<ModalScreen 
+					isOpen={this.props.statsmodal}
+					 ModalOff={()=>this.props.dispatch(stats_modalOff())}
+					 correct={this.props.protectedData.correct}
+					 incorrect={this.props.protectedData.incorrect}
+					 />
+
 						<section className="user-stats-laptop">
 							<div className="stats">
-								<div className="welcome-screen">
 									<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
-									<button
-										className="play-button"
-										onClick={() => {
-											this.props.dispatch(stats_modalOn());
-										}}
-									>
+									<button className="play-button" onClick={() => { this.props.dispatch(stats_modalOn()); }}>
 										stats
 									</button>
-								</div>
-
 								<button className="play-button" type="button">
 									<Link to="/play">Let's Learn!</Link>
 								</button>
 							</div>
 						</section>
+
+
+
 					</section>
 				</section>
 
-				<Modal_Screen isOpen={this.props.statsmodal} ModalOff={()=>this.props.dispatch(stats_modalOff())}/>
+			
 			</React.Fragment>
 		);
 	}

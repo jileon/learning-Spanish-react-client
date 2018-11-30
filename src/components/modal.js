@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import Modal from './modal_content';
 
 
-export default function Modal_Screen(props){
+export default function ModalScreen(props){
 return(
   <React.Fragment>
 
@@ -15,7 +15,7 @@ return(
     className="Modal"
     ariaHideApp={false}
   >
-    <Modal ModalOff={props.ModalOff} />
+    <Modal correct={props.correct} incorrect={props.incorrect} ModalOff={props.ModalOff} />
   </ReactModal>
 </React.Fragment>
 )
