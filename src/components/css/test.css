@@ -30,6 +30,13 @@ h4{
   top:65px;
 }
 
+
+
+.stats a{
+  text-decoration: none;
+
+}
+
 .play-button {
   display: inline-block;
   border: solid 1px black;
@@ -56,11 +63,6 @@ h4{
 
 }
 
-
-.stats a{
-  text-decoration: none;
-
-}
 .play-button:hover{
   background:#fff;
   color:#1AAB8A;

@@ -49,13 +49,19 @@ h4{
   top: 40%;
   height:40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
   line-height: 0px;
-
 }
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .stats a{
   text-decoration: none;
@@ -75,5 +81,135 @@ h4{
   margin:4px;
 
 
+}
+
+
+.play-button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.play-button:before, .play button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+
+}
+.play-button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.play-button:hover:before, .play-button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+
+.play-button {
+  display: inline-block;
+  border: solid 1px black;
+  margin-top: 20px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.play-button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  font-size: 16px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+
+}
+
+.play-button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.play-button:before, .play button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+
+}
+.play-button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.play-button:hover:before, .play-button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+@media only screen and (min-height:640px){
+
+  #dashboard{
+    height: 105px;
+    background: #244242;
+  }
+}
+
+@media only screen and (min-height:812px){
+  h4{
+    margin-top: 50px;
+  }
+ 
+}
+
+@media only screen and (min-width:1000px){
+  #dashboard{
+    height: 155px;
+    background: #244242;
+  }
+
+
+  .dashboard{
+    width: 98%;
+    height:99vh;
+    max-width: 1000px;
+    overflow:hidden;
+    background: url('../images/deskdash-small.png') no-repeat center top;
+    background-size: cover;
+    margin: 0px auto;    
+    border: 1px solid palevioletred;
+  }
+
+
+
+.stats{
+  top:20%;
+  height:50%;
+}
+
+h4{
+  position: relative;
+  font-size: 90px;
+  bottom:20%;
+}
 }
 

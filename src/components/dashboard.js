@@ -30,14 +30,17 @@ export class Dashboard extends React.Component {
 					 />
 
 						<section className="user-stats-laptop">
+					
 							<div className="stats">
-									<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
+							<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
+							<div className='buttons'>
 									<button className="play-button" onClick={() => { this.props.dispatch(stats_modalOn()); }}>
 										stats
 									</button>
 								<button className="play-button" type="button">
 									<Link to="/play">Let's Learn!</Link>
 								</button>
+								</div>
 							</div>
 						</section>
 
