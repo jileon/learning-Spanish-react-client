@@ -12,12 +12,14 @@
 .houses{
   width: 100%;
   height: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .houses img {
 position: fixed;
 width:100%;
-max-width: 700px;
+max-width: 900px;
 max-height: 300px;
 bottom: 0;
 }
@@ -25,21 +27,6 @@ bottom: 0;
 
 @media only screen and (min-width: 730px) {
   .houses img {
-    width: 90%;
-
+    width: 100%;
   }
 }
-
-@media only screen and (min-width: 1000px) {
-  .houses img {
-    width: 60%;
-
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .houses img {
-    width: 800px;
-
-  }
-}  
