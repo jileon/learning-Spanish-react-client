@@ -3,7 +3,7 @@
 
 This is an application where you can learn some simple words in Spanish.
 
-  - You start with a spanish word, and try to enter it's english equivalent
+  - You start with a Spanish word, and try to enter it's English equivalent
   - If you get it right, great! Your stats will reflect your good work
   - If you get it wrong, no worries! You'll have plenty of opportunities to redeem yourself
 
