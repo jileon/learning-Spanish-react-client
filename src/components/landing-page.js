@@ -21,6 +21,7 @@ export function LandingPage(props) {
             <RegisterPage/>
 
         </div>
+
         </React.Fragment>
     );
 }
