@@ -5,7 +5,7 @@ import Intro from './intro';
 import RegisterPage from './register-landing-page';
 import LoginPage from './login-landing-page';
 import HeaderBar from './header-bar';
-
+import Footer from './footer';
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
@@ -19,9 +19,8 @@ export function LandingPage(props) {
             <Intro/>
             <LoginPage/>
             <RegisterPage/>
-
+            <Footer/>
         </div>
-
         </React.Fragment>
     );
 }
