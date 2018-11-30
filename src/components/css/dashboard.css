@@ -74,13 +74,12 @@ h4{
   border:none;
   font-size: 16px;
   height: 30px;
+  max-height:200px;
   padding:0 2em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
   margin:4px;
-
-
 }
 
 
@@ -117,10 +116,12 @@ h4{
   display: inline-block;
   border: solid 1px black;
   margin-top: 20px;
-  width: 30%;
+  max-width:200px;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+ 
 }
 
 .play-button{
@@ -136,6 +137,7 @@ h4{
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+  border-left: 1px solid #fff;
 
 }
 
@@ -181,15 +183,15 @@ h4{
  
 }
 
-@media only screen and (min-width:1000px){
+@media only screen and (min-width:768px){
   #dashboard{
-    height: 155px;
+    height: 115px;
     background: #244242;
   }
 
 
   .dashboard{
-    width: 98%;
+    width: 90%;
     height:99vh;
     max-width: 1000px;
     overflow:hidden;
@@ -208,8 +210,30 @@ h4{
 
 h4{
   position: relative;
-  font-size: 90px;
+  font-size: 80px;
   bottom:20%;
 }
+
+.play-button {
+  width: 70%;
+  font-size: 30px;
+  height:95%;
+}
+
+
+
+.user-stats-laptop{
+  top:25%;
+  height:55%;
+}
+
+}
+
+@media only screen and (min-width:868px){
+  #dashboard{
+    height: 155px;
+    background: #244242;
+  }
+
 }
 
