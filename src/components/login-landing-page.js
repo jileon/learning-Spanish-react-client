@@ -4,8 +4,8 @@ import LoginForm from "./login-form";
 export default function LoginPage(props) {
   return (
     <React.Fragment>
-      <div id="login" />
-      <section className="page-container user-page login-user">
+     
+      <section id="login" className="page-container user-page login-user">
         <section className="user-area no-show">
           <img
             className="login-img"

@@ -113,7 +113,7 @@ h1 {
 .user-area {
   display: block;
   width: 99vw;
-  border: solid black 1px;
+  border: solid rgba(66, 66, 66, 0.644) 1px;
 }
 
 div {
@@ -138,14 +138,15 @@ div {
 
   .user-page {
     flex-direction: column;
-    margin-top: -25vh;
+    margin-top: 20%;
+
   }
 
   .user-area {
     display: block;
     width: 99vw;
-    border: solid black 1px;
-    
+    border:none;
+    margin-bottom: 50px;
   }
 
   .navigation-bar h1 {
