@@ -82,7 +82,7 @@ h4{
   background:#fff;
   color:#1AAB8A;
 }
-.play-button:before, .play button:after{
+.play-button:before, .play-button:after{
   content:'';
   position:absolute;
   top:0;
@@ -91,8 +91,8 @@ h4{
   width:0;
   background: #1AAB8A;
   transition:400ms ease all;
-
 }
+
 .play-button:after{
   right:inherit;
   top:inherit;
@@ -104,9 +104,6 @@ h4{
   transition:800ms ease all;
 }
 
-
-
-
 .play-button {
   display: inline-block;
   border: solid 1px black;
@@ -116,7 +113,6 @@ h4{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
- 
 }
 
 .play-button{
@@ -133,36 +129,15 @@ h4{
   transition:800ms ease all;
   outline:none;
   border-left: 1px solid #fff;
-
 }
 
-.play-button:hover{
-  background:#fff;
-  color:#1AAB8A;
+.button2:hover {
+  background: rgb(250, 40, 40);
+  color: #fff;
 }
-.play-button:before, .play button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-
+.button2:before, .button2:after{
+  background: rgb(251, 255, 43);
 }
-.play-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.play-button:hover:before, .play-button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-
-
 
 @media only screen and (min-height:640px){
 
