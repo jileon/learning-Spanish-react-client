@@ -29,7 +29,7 @@ export class LoginForm extends React.Component {
                 
                 <Field
                     component={Input}
-                    placeholder="username"
+                    placeholder="test"
                     type="text"
                     name="username"
                     id="username"
@@ -38,7 +38,7 @@ export class LoginForm extends React.Component {
                    <div className='form-separator'></div>
                 <label htmlFor="password"></label>
                 <Field
-                    placeholder="password"
+                    placeholder="password123"
                     component={Input}
                     type="password"
                     name="password"
