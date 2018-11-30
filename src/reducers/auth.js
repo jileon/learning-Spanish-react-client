@@ -1,3 +1,4 @@
+import jwtDecode from 'jwt-decode';
 import {
     SET_AUTH_TOKEN,
     CLEAR_AUTH,
@@ -15,8 +16,10 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     if (action.type === SET_AUTH_TOKEN) {
+        const decodedToken = jwtDecode(action.authToken);
         return Object.assign({}, state, {
-            authToken: action.authToken
+            authToken: action.authToken,
+            currentUser: decodedToken.user
         });
     } else if (action.type === CLEAR_AUTH) {
         return Object.assign({}, state, {
