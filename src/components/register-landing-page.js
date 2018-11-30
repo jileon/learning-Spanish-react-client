@@ -8,9 +8,13 @@ export default function RegisterPage(props){
     <section className='user-area'>
       <RegistrationForm/>
       </section>
-      <section className='user-area no-show'>
-        <h3>Placeholder</h3>
-      </section>
+      <section className="user-area no-show">
+          <img
+            className="login-img"
+            alt="login"
+            src={require("./images/espanol.png")}
+          />
+        </section>
       
     </section>
   )
