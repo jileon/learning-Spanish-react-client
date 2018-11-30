@@ -7,7 +7,6 @@ export default function LoginPage(props) {
       <div id="login" />
       <section className="page-container user-page login-user">
         <section className="user-area no-show">
-          {/* <h3>Placeholder</h3> */}
           <img
             className="login-img"
             alt="login"

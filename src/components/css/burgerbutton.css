@@ -1,0 +1,34 @@
+.burger-container {
+  cursor: pointer;
+  margin-top: 0px;
+  padding-top:20px;
+  text-align: right; 
+
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+  text-align: right;
+}
+
+
+.bar1:hover, .bar2:hover, .bar3:hover {
+  width: 35px;
+  height: 5px;
+  background: grey;
+  margin: 6px 0;
+  transition: 0.4s;
+  text-align: right;
+}
+
+
+.burger-container:hover {
+background-color: grey;
+min-width: 70px;
+text-align: center;
+
+}

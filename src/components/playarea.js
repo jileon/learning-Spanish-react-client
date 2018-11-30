@@ -15,8 +15,9 @@ export class PlayArea extends React.Component {
       <React.Fragment>
         <HeaderBar className="header-bar-logged" />
         <section id="#play-area" className="play-page">
-          <PlayCard />
+        <PlayCard />
           <section className="houses">
+        
             <img src={require("./images/AS_houses_1.png")} alt="houses" />
           </section>
         </section>

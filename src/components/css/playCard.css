@@ -1,15 +1,15 @@
 .card {
-  border: solid 1px red;
-  width: 50%;
-  height: 40vh;
-  max-width: 400px;
-  max-height: 250px;
+  width: 95%;
+  height: 50vh;
+  max-width: 600px;
+  max-height: 350px;
   position: relative;
-  margin-top: 35px;
   z-index: 2;
-  background: rgba(249, 249, 249, 0.72);
+  background: rgba(249, 249, 249, 0.836);
   border: 1px solid #006b6e;
   border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 70px;
 }
 
 .card h3 {
@@ -40,7 +40,7 @@
 .user-form button {
   display: block;
   border: solid 1px black;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -91,7 +91,7 @@
   border: solid 1px black;
   height: 40px;
   width: 75%;
-  max-width: 200px;
+  max-width: 300px;
   padding: 10px;
 }
 
@@ -99,17 +99,40 @@
   height: 30px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 375px) {
+
+  .user-form button {
+    margin-top: 40px;
+    height: 40px;
+  }
+
+}
+
+
+@media only screen and (min-width: 500px) {
   .user-form input {
     width: 70%;
   }
 
   .user-form button {
-    margin-top: 15px;
+    margin-top: 10px;
     height: 30px;
   }
 
-  .current-word {
-    top: -10px;
+}
+
+@media only screen and (min-width: 700px) {
+
+  .card h3 {
+    all: unset;
+    text-align: center;
+    font-size: 50px;
+
   }
+
+  .user-form button {
+    margin-top: 50px;
+    height: 60px;
+  }
+
 }

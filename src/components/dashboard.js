@@ -17,39 +17,36 @@ export class Dashboard extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<ModalScreen
+					isOpen={this.props.statsmodal}
+					ModalOff={() => this.props.dispatch(stats_modalOff())}
+					correct={this.props.protectedData.correct}
+					incorrect={this.props.protectedData.incorrect}
+				/>
 				<HeaderBar className="header-bar-logged" />
 				<div id="dashboard" />
 				<section className="dasboard-container">
-
 					<section className="dashboard">
-					<ModalScreen 
-					isOpen={this.props.statsmodal}
-					 ModalOff={()=>this.props.dispatch(stats_modalOff())}
-					 correct={this.props.protectedData.correct}
-					 incorrect={this.props.protectedData.incorrect}
-					 />
-
 						<section className="user-stats-laptop">
-					
 							<div className="stats">
-							<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
-							<div className='buttons'>
-									<button className="play-button" onClick={() => { this.props.dispatch(stats_modalOn()); }}>
+								<h4> WELCOME {this.props.username.toUpperCase()}!</h4>
+								<div className="buttons">
+									<button
+										className="play-button"
+										onClick={() => {
+											this.props.dispatch(stats_modalOn());
+										}}
+									>
 										stats
 									</button>
-								<button className="play-button" type="button">
-									<Link to="/play">Let's Learn!</Link>
-								</button>
+									<button className="play-button" type="button">
+										<Link to="/play">Let's Learn!</Link>
+									</button>
 								</div>
 							</div>
 						</section>
-
-
-
 					</section>
 				</section>
-
-			
 			</React.Fragment>
 		);
 	}
