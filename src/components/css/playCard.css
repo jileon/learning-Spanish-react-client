@@ -16,6 +16,14 @@
   text-align: center;
 }
 
+.feedback{
+  text-align: center;
+}
+.feedback h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
 
 .current-word {
   background: #e97c4d;
@@ -129,6 +137,11 @@
     font-size: 50px;
 
   }
+
+  .feedback h3 {
+    font-size: 20px;
+  }
+  
 
   .user-form button {
     margin-top: 50px;
