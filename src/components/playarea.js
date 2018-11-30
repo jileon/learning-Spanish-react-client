@@ -8,7 +8,7 @@ import "./css/playArea.css";
 export class PlayArea extends React.Component {
   render() {
     if (!this.props.loggedIn) {
-      return <Redirect to="/#register" />;
+      return <Redirect to="/" />;
     }
 
     return (
