@@ -32,7 +32,7 @@ export class PlayCard extends React.Component {
           <h3>{this.props.question}</h3>
         </div>
         <form className="user-form">
-          <label htmlFor="user-answer" />
+          <label htmlFor="user-answer" className="userAnswer"></label>
           <input
             name="userAnswer"
             placeholder="Click here to type"
@@ -40,6 +40,7 @@ export class PlayCard extends React.Component {
             type="userAnswer"
             ref={input => (this.input = input)}
           />
+   
           <button
             type="submit"
             className="submitButton"
