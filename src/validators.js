@@ -1,6 +1,6 @@
 export const required = value => (value ? undefined : 'Required');
 export const unrequired = value => (value ? undefined : 'Username Required. Demo: username: test');
-export const pwrequired = value => (value ? undefined : 'Password Required. Demo: username: password123');
+export const pwrequired = value => (value ? undefined : 'Password Required. Demo: password: password123');
 export const nonEmpty = value =>
     value.trim() !== '' ? undefined : 'Cannot be empty';
 export const isTrimmed = value =>
