@@ -75,6 +75,13 @@ h1 {
 
 .navLinks a {
   color: #58513f;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navLinks a:hover {
+  color: rgb(255, 250, 250);
+  text-decoration: none;
 }
 
 .header-bar-play .navLinks a{
@@ -86,9 +93,10 @@ h1 {
 .header-bar-play .navLinks a:hover{
   color: rgb(255, 255, 255);
   text-decoration: none;
-
 }
 
+
+ 
 
 .header-bar-play h1 a{
   color: rgb(0, 0, 0);
