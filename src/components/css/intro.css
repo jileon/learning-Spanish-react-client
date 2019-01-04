@@ -41,6 +41,10 @@ text-align: center;
   top: 20%;
 }
 
+footer a {
+  color: black;
+}
+
 
 @media only screen and (min-width:500px ){
   .learn-spanish-img{

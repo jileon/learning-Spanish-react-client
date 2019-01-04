@@ -43,6 +43,7 @@ h1 {
 }
 
 .navigation-bar {
+  margin-top: -5px;
   /* padding: 10px;
   background: rgb(78, 135, 161);
   height:60px; */
@@ -180,6 +181,10 @@ footer a{
   .navigation-bar h1 {
     font-size: 26px;
   }
+
+  .navigation-bar {
+    margin-top: 6px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -227,4 +232,9 @@ footer a{
 
 }
 
-
+@media only screen and (min-width: 575px) {
+  .navigation-bar h1 {
+    font-size: 40px;
+    margin-left: 30px;
+  }
+}
