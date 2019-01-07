@@ -6,7 +6,9 @@ import { nonEmpty, unrequired, pwrequired } from '../validators';
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
-    return this.props.dispatch(login(values.username, values.password));
+    return this.props.dispatch(
+      login(values.usernameLogin, values.passwordLogin)
+    );
   }
 
   render() {
@@ -32,7 +34,7 @@ export class LoginForm extends React.Component {
           component={Input}
           placeholder="test"
           type="text"
-          name="username-login"
+          name="usernameLogin"
           validate={[unrequired, nonEmpty]}
         />
         <div className="form-separator" />
@@ -41,7 +43,7 @@ export class LoginForm extends React.Component {
           placeholder="password123"
           component={Input}
           type="password"
-          name="password-login"
+          name="passwordLogin"
           validate={[pwrequired, nonEmpty]}
         />
         <button

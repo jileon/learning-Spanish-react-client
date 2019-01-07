@@ -34,6 +34,7 @@ export const fetchStats = () => (dispatch, getState) => {
   const userId = getState().auth.currentUser.id;
   const username = getState().auth.currentUser.username;
   const body = { username, userId };
+
   return fetch(`${API_BASE_URL}/stats`, {
     method: 'POST',
     body: JSON.stringify(body),
