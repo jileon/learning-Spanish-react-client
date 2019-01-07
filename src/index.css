@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/ssa1qac.css");
+@import url('https://use.typekit.net/ssa1qac.css');
 
 html {
   scroll-behavior: smooth;
@@ -13,99 +13,108 @@ body {
   padding: 0;
   font-family: sans-serif;
   box-sizing: border-box;
-  max-width:100vw;
-
+  max-width: 100vw;
 }
 
-.header-bar, .header-bar-logged, .header-bar-play{
-  background: #FFB201;
-  position: fixed;
+.header-bar,
+.header-bar-logged,
+.header-bar-play {
+  background: #ffb201;
   border-bottom: 1px solid black;
-  height:11vh;
+  position: fixed;
   width: 100%;
-  max-width: 100vw;
   top: 0px;
   z-index: 3;
+  max-width: 100vw;
+  max-height: 120px;
+  min-height: 90px;
+  box-sizing: border-box;
 }
 
 .header-bar-play {
-  background: rgb(78, 135, 161);  
+  background: rgb(78, 135, 161);
 }
 
 h1 {
-  margin-top: 2.75vh;
-  margin-left: 20px;
+  padding-left: 20px;
   font-family: ff-prater-block-web, sans-serif;
   font-weight: 400;
   font-size: 30px;
   font-style: normal;
-  width: 50%;
 }
 
+.logo {
+  width: 20%;
+  width: 100%;
+  max-height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.navigation-bar-nav {
+  width: 80%;
+  height: 100%;
+  max-height: 120px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
 .navigation-bar {
-  margin-top: -5px;
-  /* padding: 10px;
-  background: rgb(78, 135, 161);
-  height:60px; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .navigation-bar h1,
-.navigation-bar nav,
 .navigation-bar-nav li {
   display: inline-block;
-  /* vertical-align: middle; */
 }
 
 .navigation-bar-nav li {
-  margin-right: 20px;
-  text-align: right;
-  padding-top: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .navLinks {
   text-align: right;
-  position: absolute;
-  top: -0.75vh;
-  right: 25px;
+  vertical-align: middle;
+  padding-left: 0px;
+  margin: 0px;
 }
 
 .navigation-bar h1 a {
   color: rgb(21, 0, 27);
 }
 
-
 .navLinks a {
   color: #58513f;
   text-decoration: none;
   padding: 10px;
 }
-
 .navLinks a:hover {
   color: rgb(255, 250, 250);
   text-decoration: none;
 }
 
-.header-bar-play .navLinks a{
+.header-bar-play .navLinks a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding:10px;
+  padding: 10px;
 }
 
-.header-bar-play .navLinks a:hover{
+.header-bar-play .navLinks a:hover {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
-
- 
-
-.header-bar-play h1 a{
+.header-bar-play h1 a {
   color: rgb(0, 0, 0);
 }
-
-
-
-
 
 #home h2 {
   text-align: center;
@@ -125,34 +134,48 @@ h1 {
 .user-page {
   display: flex;
   justify-content: center;
-
 }
 
 .user-area {
   display: block;
   width: 99vw;
-  border: solid rgba(66, 66, 66, 0.644) 1px;
+  border: solid rgb(226, 226, 226) 1px;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  background: lightslategray;
+  padding: 18px;
 }
 
 div {
   height: 80px;
 }
 
-footer{
-  height:50px;
-  text-align: center;
-  background: lightslategray;
-  padding: 18px;
-}
-
-footer a{
+footer a {
   padding: 2px;
 }
 
+@media only screen and (max-width: 528px) {
+  .navLinks {
+    margin: 0px;
+  }
+  .navLinks li {
+    display: block;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
 
+  .navigation-bar-nav {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 0px;
+  }
+}
 @media only screen and (max-width: 575px) {
-
-  #login, #register {
+  #login,
+  #register {
     all: unset;
   }
 
@@ -160,81 +183,38 @@ footer a{
     display: none;
   }
 
-  .navLinks li {
-    font-size: 16px;
-   
-  }
-
   .user-page {
     flex-direction: column;
     margin-top: 20%;
-
   }
 
   .user-area {
     display: block;
     width: 99vw;
-    border:none;
+    border: none;
     margin-bottom: 50px;
   }
-
-  .navigation-bar h1 {
-    font-size: 26px;
-  }
-
-  .navigation-bar {
-    margin-top: 6px;
-  }
 }
 
-@media only screen and (max-width: 500px) {
-  .navLinks li {
-    font-size: 15px;
-    margin-right: 10px;
-  }
-
-  .navigation-bar h1 {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .navLinks li {
-    font-size: 12px;
-    margin-right: 10px;
-  }
-
+@media only screen and (max-width: 697px) {
   .navLinks {
-    right: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .navLinks li {
+    padding: 10px 0px;
+  }
+}
+
+@media only screen and (min-width: 875px) {
+  .navigation-bar h1 {
+    font-size: 35px;
+    margin-left: 30px;
   }
 
-  .navigation-bar h1 {
+  .navLinks a {
     font-size: 20px;
-    margin-left: 10px;
-  }
-
-}
-
-@media only screen and (min-width: 1000px) {
-  .navLinks li {
-    font-size: 22px;
-    margin-right: 10px;
-  }
-
-  .navLinks {
-    right: 10;
-  }
-
-  .navigation-bar h1 {
-    font-size: 40px;
-    margin-left: 30px;
-  }
-
-}
-
-@media only screen and (min-width: 575px) {
-  .navigation-bar h1 {
-    font-size: 40px;
-    margin-left: 30px;
   }
 }
